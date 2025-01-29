@@ -16,6 +16,8 @@ require("lazy").setup({
 	require("nv.plugins.autocomplete"),
 	require("nv.plugins.autoformat"),
 	require("nv.plugins.comments"),
+	-- Plugins to look into before enabling
+	-- require 'nv.plugins.debug',
 	require("nv.plugins.games"),
 	require("nv.plugins.flash"),
 	require("nv.plugins.harpoon"),
@@ -29,9 +31,6 @@ require("lazy").setup({
 	require("nv.plugins.treesitter"),
 	require("nv.plugins.trouble"),
 	require("nv.plugins.whichkey"),
-
-	-- Plugins to look into before enabling
-	-- require 'nv.plugins.debug',
 
 	-- The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	-- For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
