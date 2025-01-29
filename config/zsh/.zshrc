@@ -13,8 +13,6 @@ SAVEHIST=10000
 HISTFILE="$HOME/.config/zsh/.zsh_history"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# I am also interested in this theme: https://github.com/romkatv/powerlevel10k
-# This theme changes the prompt
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="afowler"
@@ -24,7 +22,7 @@ ZSH_THEME="afowler"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -35,7 +33,7 @@ ZSH_THEME="afowler"
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
