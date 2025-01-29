@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+rm ~/.local/wallpapers/bg.jpg  
+cp "$(find ~/.local/wallpapers -type f | shuf -n 1)" ~/.local/wallpapers/bg.jpg
