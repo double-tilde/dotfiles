@@ -58,6 +58,7 @@ Here are my dotfiles and some notes for myself if I am rebuilding my system and 
 
 **Tokyo Night Storm Colors**
 
+```
 bg = #24283b
 bg_dark = #1f2335
 bg_dark1 = #1b1e2d
@@ -88,3 +89,4 @@ red1 = #db4b4b
 teal = #1abc9c
 terminal_black = #414868
 yellow = #e0af68
+```
