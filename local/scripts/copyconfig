@@ -16,8 +16,6 @@ mkdir ~/docs/dotfiles/config/zsh/
 # Copy home directory files
 cp ~/.zshenv ~/docs/dotfiles/
 cp ~/.profile ~/docs/dotfiles/
-cp ~/.Xresources ~/docs/dotfiles/
-cp ~/.xinitrc ~/docs/dotfiles/
 
 # Copy dotfiles
 cp -ar ~/.config/alacritty/ ~/docs/dotfiles/config/
@@ -29,6 +27,7 @@ cp -ar ~/.config/nvim/ ~/docs/dotfiles/config/
 cp -ar ~/.config/picom/ ~/docs/dotfiles/config/
 cp -ar ~/.config/polybar/ ~/docs/dotfiles/config/
 cp -ar ~/.config/tmux/tmux.conf ~/docs/dotfiles/config/tmux/
+cp -ar ~/.config/X11/ ~/docs/dotfiles/config/
 cp -ar ~/.config/zsh/.zshrc ~/docs/dotfiles/config/zsh/
 
 # Copy personal local folders

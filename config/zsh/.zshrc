@@ -33,7 +33,7 @@ HYPHEN_INSENSITIVE="true"
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -60,9 +60,13 @@ export PATH="$HOME/.local/scripts:$PATH"
 # Go
 export GOPATH=$HOME/.config/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-# NVM
-export NVM_DIR="$HOME/.nvm"
+
+# Add nvm / npm / node to path
+export NVM_DIR="$XDG_DATA_HOME"/nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+
+
 # Rust/Cargo
 export RUSTUP_HOME="$HOME/.config/rustup"
 export CARGO_HOME="$HOME/.config/cargo"
