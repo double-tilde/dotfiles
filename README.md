@@ -58,6 +58,8 @@ Here are my dotfiles and some notes for myself if I am rebuilding my system and 
 
 **Tokyo Night Storm Colors**
 
+- WSL2 folder includes a file to copy these colors from for applying to windows terminal
+
 ```
 bg = #24283b
 bg_dark = #1f2335

@@ -1,0 +1,62 @@
+{
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Tokyo Night Storm",
+      "cursorShape": "filledBox",
+      "font": {
+        "cellHeight": "1.3",
+        "face": "GeistMono Nerd Font",
+        "size": 13
+      }
+    }
+  },
+  "schemes": [
+    {
+      "background": "#282828",
+      "black": "#282828",
+      "blue": "#458588",
+      "brightBlack": "#928374",
+      "brightBlue": "#83A598",
+      "brightCyan": "#8EC07C",
+      "brightGreen": "#B8BB26",
+      "brightPurple": "#D3869B",
+      "brightRed": "#FB4934",
+      "brightWhite": "#EBDBB2",
+      "brightYellow": "#FABD2F",
+      "cursorColor": "#7C6F64",
+      "cyan": "#689D6A",
+      "foreground": "#FBF1C7",
+      "green": "#98971A",
+      "name": "Gruvbox Dark",
+      "purple": "#B16286",
+      "red": "#CC241D",
+      "selectionBackground": "#7C6F64",
+      "white": "#A89984",
+      "yellow": "#D79921"
+    },
+    {
+      "background": "#1A1B26",
+      "black": "#24283B",
+      "blue": "#7AA2F7",
+      "brightBlack": "#414868",
+      "brightBlue": "#7AA2F7",
+      "brightCyan": "#7DCFFF",
+      "brightGreen": "#9ECE6A",
+      "brightPurple": "#BB9AF7",
+      "brightRed": "#F7768E",
+      "brightWhite": "#C0CAF5",
+      "brightYellow": "#E0AF68",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#7DCFFF",
+      "foreground": "#C0CAF5",
+      "green": "#9ECE6A",
+      "name": "Tokyo Night Storm",
+      "purple": "#BB9AF7",
+      "red": "#F7768E",
+      "selectionBackground": "#FFFFFF",
+      "white": "#A9B1D6",
+      "yellow": "#E0AF68"
+    }
+  ],
+  "themes": []
+}
