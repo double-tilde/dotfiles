@@ -52,13 +52,12 @@ Here are my dotfiles and some notes for myself if I am rebuilding my system and 
 
 **Fonts**
 
-- Karla
-- Geist Mono Nerd Font
-- Hack Mono Nerd Font
-
-**Tokyo Night Storm Colors**
-
+- San-serif: Karla
+- Mono: Geist Mono Nerd Font
+- Mono alternative: Hack Mono Nerd Font
+- Colors: Tokyo Night Storm Colors
 - WSL2 folder includes a file to copy these colors from for applying to windows terminal
+- Unsplash collection for wallpapers: 984517
 
 ```
 bg = #24283b
