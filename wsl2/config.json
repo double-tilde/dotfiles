@@ -56,6 +56,29 @@
       "selectionBackground": "#FFFFFF",
       "white": "#A9B1D6",
       "yellow": "#E0AF68"
+    },
+    {
+      "background": "#141415",
+      "black": "#141415",
+      "blue": "#6E94B2",
+      "brightBlack": "#333738",
+      "brightBlue": "#6E94B2",
+      "brightCyan": "#90A0B5",
+      "brightGreen": "#8CB66D",
+      "brightPurple": "#7E98E8",
+      "brightRed": "#DF6882",
+      "brightWhite": "#CDCDCD",
+      "brightYellow": "#F3BE7C",
+      "cursorColor": "#CDCDCD",
+      "cyan": "#90A0B5",
+      "foreground": "#CDCDCD",
+      "green": "#8CB66D",
+      "name": "Vague",
+      "purple": "#7E98E8",
+      "red": "#DF6882",
+      "selectionBackground": "#6E94B2",
+      "white": "#CDCDCD",
+      "yellow": "#E0A363"
     }
   ],
   "themes": []
