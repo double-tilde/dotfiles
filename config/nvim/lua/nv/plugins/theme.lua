@@ -1,13 +1,11 @@
 return {
 	{
-		"folke/tokyonight.nvim",
-		name = "Tokyonight Theme",
+		"vague2k/vague.nvim",
+		name = "Vague Theme",
 		lazy = false,
 		priority = 1000,
-		opts = {},
 		config = function()
-			require("tokyonight").setup({
-				style = "storm",
+			require("vague").setup({
 				transparent = true,
 			})
 			-- Background Opacity
@@ -17,26 +15,23 @@ return {
 			vim.cmd.hi("NonText ctermbg=none")
 			-- You can configure highlights by doing something like:
 			vim.cmd.hi("Comment gui=none")
-			vim.cmd.colorscheme("tokyonight-storm")
+			vim.cmd.colorscheme("vague")
 		end,
 	},
 	-- Other themes I like
 	-- {
-	-- 	"ellisonleao/gruvbox.nvim",
-	-- 	name = "Gruvbox",
-	-- 	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-	-- 	priority = 1000, -- Make sure to load this before all the other start plugins.
-	-- 	config = function()
-	-- 		vim.cmd.colorscheme("gruvbox")
-	-- 	end,
-	-- },
-	-- {
-	-- 	"diegoulloao/neofusion.nvim",
-	-- 	name = "Neofusion Theme",
+	-- 	"folke/tokyonight.nvim",
+	-- 	name = "Tokyonight Theme",
+	-- 	lazy = false,
 	-- 	priority = 1000,
 	-- 	opts = {},
+	-- },
+	-- {
+	-- 	"ellisonleao/gruvbox.nvim",
+	-- 	name = "Gruvbox",
+	-- 	priority = 1000,
 	-- 	config = function()
-	-- 		vim.cmd.colorscheme("neofusion")
+	-- 		vim.cmd.colorscheme("gruvbox")
 	-- 	end,
 	-- },
 }

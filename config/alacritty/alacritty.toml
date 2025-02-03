@@ -5,7 +5,7 @@
 #
 
 general.import = [
-  "~/.config/alacritty/themes/tokyonight-storm.toml"
+  "~/.config/alacritty/themes/vague.toml"
 ]
 
 [env]

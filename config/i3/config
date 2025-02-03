@@ -182,10 +182,10 @@ bindsym $mod+r mode "resize"
 # Theme Stuff
 
 # Set the window border colors
-set $bg_color                   #24283b
-set $fg_color                   #c0caf5
-set $border_color_active        #7aa2f7
-set $border_color_inactive      #414868
+set $bg_color                   #141415
+set $fg_color                   #cdcdcd
+set $border_color_active        #6e94b2
+set $border_color_inactive      #333738
 
 # Set window border width
 new_window pixel 1
