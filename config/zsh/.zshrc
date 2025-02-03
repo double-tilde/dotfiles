@@ -137,13 +137,14 @@ bindkey '^f' fzf-open-nvim
 alias bm="nvim $HOME/docs/bookmarks"
 
 # Neovim Aliases
-alias nv="nvim"
+alias vim="nvim"
 alias -s go="nvim"
 alias -s lua="nvim"
 alias -s html="nvim"
 alias -s css="nvim"
 alias -s js="nvim"
 alias -s svelte="nvim"
+export MANPAGER="nvim +Man!"
 
 # NPM Aliases
 alias bs-serve="browser-sync --server --files ."
