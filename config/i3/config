@@ -34,7 +34,7 @@ exec --no-startup-id "setxkbmap -option caps:swapescape"
 
 # Set lockscreen
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l -u ~/.local/wallpapers/lock.jpg
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l -u ~/.local/wallpapers/bg.jpg
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
