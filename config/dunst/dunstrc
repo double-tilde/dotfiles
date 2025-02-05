@@ -100,24 +100,24 @@
 
 
 [urgency_low]
-    background = "#141415"
-    foreground = "#cdcdcd"
-    frame_color = "#90a0b5"
+    background = "#161617"
+    foreground = "#c9c7cd"
+    frame_color = "#92a2d5"
     timeout = 5
     icon = /usr/share/icons/Qogir/16/status/package-installed-outdated.svg
 
 [urgency_normal]
-    background = "#141415"
-    foreground = "#cdcdcd"
-    frame_color = "#8cb66d"
+    background = "#161617"
+    foreground = "#c9c7cd"
+    frame_color = "#90b99f"
     timeout = 5
     override_pause_level = 30
     icon = /usr/share/icons/Qogir/16/emblems/emblem-question.svg
 
 [urgency_critical]
-    background = "#141415"
-    foreground = "#cdcdcd"
-    frame_color = "#df6882"
+    background = "#161617"
+    foreground = "#c9c7cd"
+    frame_color = "#ea83a5"
     timeout = 120
     icon = /usr/share/icons/Qogir/16/actions/dialog-warning.svg
 

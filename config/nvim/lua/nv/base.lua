@@ -31,6 +31,9 @@ vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
+-- Don't show command line below the statusline, entering command mode will
+-- overlay statusline instead
+vim.opt.cmdheight = 0
 
 -- Sync clipboard between OS and Neovim.
 -- I have commented this out since I do not want the browser overwriting what

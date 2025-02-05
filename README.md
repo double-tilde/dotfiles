@@ -55,31 +55,43 @@ Here are my dotfiles and some notes for myself if I am rebuilding my system and 
 - San-serif: Karla
 - Mono: Geist Mono Nerd Font
 - Mono alternative: Hack Mono Nerd Font
-- Colors: [Vague Theme](https://github.com/vague2k/vague.nvim)
+- Colors: [Old World Theme](https://github.com/dgox16/oldworld.nvim)
 - WSL2 folder includes a file to copy these colors from for applying to windows terminal
 - Unsplash collection for wallpapers: 984517
 
 ```
-bg = "#141415",
-fg = "#cdcdcd",
-floatBorder = "#878787",
-line = "#252530",
-comment = "#606079",
-builtin = "#b4d4cf",
-func = "#c48282",
-string = "#e8b589",
-number = "#e0a363",
-property = "#c3c3d5",
-constant = "#aeaed1",
-parameter = "#bb9dbd",
-visual = "#333738",
-error = "#df6882",
-warning = "#f3be7c",
-hint = "#7e98e8",
-operator = "#90a0b5",
-keyword = "#6e94b2",
-type = "#9bb4bc",
-search = "#405065",
-plus = "#8cb66d",
-delta = "#f3be7c",
+background: #161617
+foreground: #c9c7cd
+# I use this as my main bg color:
+background dark= "#131314
+black: #27272a
+subtext1: #b4b1ba
+subtext2: #9f9ca6
+subtext3: #8b8693
+subtext4: #6c6874
+red: #ea83a5
+green: #90b99f
+yellow: #e6b99d
+purple: #aca1cf
+magenta: #e29eca
+orange: #f5a191
+blue: #92a2d5
+cyan: #85b5ba
+bright_black: #353539
+bright_red: #ed96b3
+bright_green: #a7c8b3
+bright_yellow: #eac5ae
+bright_purple: #b7aed5
+bright_magenta: #e8b0d4
+bright_orange: #f6b0a2
+bright_blue: #a7b3dd
+bright_cyan: #97c0c4
+dark_green: #38464e
+dark_orange: #514151
+dark_blue: #3e3f4f
+gray0: #18181a
+gray1: #1b1b1c
+gray2: #2a2a2c
+gray3: #313134
+gray4: #3b3b3e
 ```

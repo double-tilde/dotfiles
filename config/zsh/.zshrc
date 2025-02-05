@@ -75,10 +75,8 @@ export PATH=$PATH:$CARGO_HOME/bin
 # fzf
 export FZF_DEFAULT_COMMAND='find . -type f'
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
-# Tokyonight storm theme
-# export FZF_DEFAULT_OPTS="--layout=reverse --height=30% --ansi --border bottom --color=fg:#c0caf5,bg:#24283b,hl:#c0caf5 --color=fg+:#7aa2f7,bg+:#24283b,hl+:#7aa2f7 --color=info:#9ece6a,prompt:#f7768e,pointer:#7aa2f7 --color=marker:#9ece6a,spinner:#9ece6a,header:#e0af68"
-# Vague theme
-export FZF_DEFAULT_OPTS="--layout=reverse --height=30% --ansi --border bottom --color=fg:#cdcdcd,bg:#141415,hl:#cdcdcd --color=fg+:#6e94b2,bg+:#141415,hl+:#6e94b2 --color=info:#8cb66c,prompt:#df6882,pointer:#6e94b2 --color=marker:#8cb66c,spinner:#8cb66c,header:#e0a363"
+# Old world theme
+export FZF_DEFAULT_OPTS="--layout=reverse --height=30% --ansi --border bottom --color=fg:#c9c7cd,bg:#131314,hl:#c9c7cd --color=fg+:#92a2d5,bg+:#131314,hl+:#92a2d5 --color=info:#90b99f,prompt:#df6882,pointer:#92a2d5 --color=marker:#90b99f,spinner:#90b99f,header:#e6b99d"
 source <(fzf --zsh)
 
 # Open nvim in the selected directory

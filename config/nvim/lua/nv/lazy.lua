@@ -23,6 +23,7 @@ require("lazy").setup({
 	require("nv.plugins.harpoon"),
 	require("nv.plugins.lint"),
 	require("nv.plugins.lsp"),
+	require("nv.plugins.lualine"),
 	-- modules is smaller plugins like mini, css colors, git signs, etc
 	require("nv.plugins.modules"),
 	require("nv.plugins.oil"),
