@@ -10,14 +10,12 @@ My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) co
 
 ## Colors & Theming
 
-**Fonts**
-
-- San-serif: Karla
-- Mono: Geist Mono Nerd Font
-- Mono alternative: Hack Mono Nerd Font
+- San-serif font: Karla
+- Mono font: Geist Mono Nerd Font
+- Mono alternative font: Hack Mono Nerd Font
 - Colors: [Old World Theme](https://github.com/dgox16/oldworld.nvim)
-- WSL2 folder includes a file to copy these colors from for applying to windows terminal
-- Most of my background images and tabliss images come from unsplash, particuarly:
+- WSL2 folder includes these colors for the windows terminal
+- Most of my background images and tabliss images come from unsplash, particularly:
     - [Tabliss wallpaper collection](https://unsplash.com/collections/74420642/victorian)
     - [British Library](https://unsplash.com/@britishlibrary)
     - [Birmingham Museum Trust](https://unsplash.com/@birminghammuseumstrust)
