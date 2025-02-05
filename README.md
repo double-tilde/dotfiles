@@ -6,7 +6,7 @@
 
 # My Dot Files
 
-My dotfiles based on the [Old World](https://unsplash.com/collections/74420642/victorian) colorscheme for Neovim
+My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) colorscheme for Neovim
 
 ## Colors & Theming
 
