@@ -28,6 +28,8 @@ exec --no-startup-id picom
 exec --no-startup-id dex --autostart --environment i3
 # Start polybar
 exec --no-startup-id polybar
+# Start dunst
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Swap capslock and escape key
 exec --no-startup-id "setxkbmap -option caps:swapescape"
@@ -67,6 +69,8 @@ bindsym $mod+b exec firefox
 bindsym $mod+n exec obsidian
 # Lockscreen shortcut
 bindsym $mod+Shift+q exec betterlockscreen -l
+# Print screen
+bindsym Print exec --no-startup-id maim "$HOME/docs/images/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png" && notify-send "Screenshot Successful"
 
 # Kill focused window
 bindsym $mod+c kill

@@ -20,12 +20,15 @@ vim.keymap.set("i", "<down>", '<cmd>echo "Use j in normal mode to move"<CR>')
 vim.keymap.set("i", "<up>", '<cmd>echo "Use k in normal mode to move"<CR>')
 vim.keymap.set("i", "<right>", '<cmd>echo "Use l in normal mode to move"<CR>')
 
+-- Paste what was last yanked
+vim.keymap.set("n", "<leader>p", '"0p', { desc = "Paste what was last yanked"})
+
 -- Toggle relative and absolute line numbers, M = alt
 vim.keymap.set("n", "<M-r>", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative and absolte line numbers" })
 
 -- Select a line in visual block mode and use capital J or K to move that line
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Visually select a line and move it down" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Visually select a line and move it up" })
+vim.keymap.set("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" })
+vim.keymap.set("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move selected lines up" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
