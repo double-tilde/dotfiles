@@ -6,14 +6,32 @@
 
 # My Dot Files
 
-Here are my dotfiles and some notes for myself if I am rebuilding my system and need to reinstall some things.
+My dotfiles based on the [Old World](https://unsplash.com/collections/74420642/victorian) colorscheme for Neovim
+
+## Colors & Theming
+
+**Fonts**
+
+- San-serif: Karla
+- Mono: Geist Mono Nerd Font
+- Mono alternative: Hack Mono Nerd Font
+- Colors: [Old World Theme](https://github.com/dgox16/oldworld.nvim)
+- WSL2 folder includes a file to copy these colors from for applying to windows terminal
+- Most of my background images and tabliss images come from unsplash, particuarly:
+    - [Tabliss wallpaper collection](https://unsplash.com/collections/74420642/victorian)
+    - [British Library](https://unsplash.com/@britishlibrary)
+    - [Birmingham Museum Trust](https://unsplash.com/@birminghammuseumstrust)
+    - [Europeana](https://unsplash.com/@birminghammuseumstrust)
+
+![](images/screencap.png)
+
+Below are some notes on what I like to install on new systems
 
 ## Install
 
 **Terminals**
 
 - alacritty
-- kitty
 - xterm
 
 **Terminal / Development Tools**
@@ -28,36 +46,32 @@ Here are my dotfiles and some notes for myself if I am rebuilding my system and 
 - tmux
 - unzip
 - ripgrep
+- fd-find
+- fzf
 - zsh
 - fastfetch
 - node & npm
 - rust & cargo
 
-### Extras
+**Extras**
 
 - rofi
 - polybar
 - betterlockscreen
+- autotiling (autotiling for i3)
+- dunst (notifications)
+- maim (screenshots)
 - pavucontrol (audio settings)
 - thunar (file manager)
 - nwg-look (theme settings)
 - mpv & vlc (video players)
-- feh (image viewing x11)
+- feh (image viewing)
 - obsidian (notes)
 - obs-studio (screen recording)
 - inkspace & gimp (photo editing)
 - bitwig (audio)
 
-## Colors & Theming
-
-**Fonts**
-
-- San-serif: Karla
-- Mono: Geist Mono Nerd Font
-- Mono alternative: Hack Mono Nerd Font
-- Colors: [Old World Theme](https://github.com/dgox16/oldworld.nvim)
-- WSL2 folder includes a file to copy these colors from for applying to windows terminal
-- Unsplash collection for wallpapers: 74420642
+![](images/landing.jpg)
 
 ```
 background: #161617

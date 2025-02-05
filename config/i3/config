@@ -30,7 +30,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id polybar
 # Start dunst
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-
+# Start autotiling for automatic spiral layouts
+exec --no-startup-id autotiling
 # Swap capslock and escape key
 exec --no-startup-id "setxkbmap -option caps:swapescape"
 
@@ -189,7 +190,7 @@ bindsym $mod+r mode "resize"
 set $bg_color                   #131314
 set $fg_color                   #c9c7cd
 set $border_color_active        #92a2d5
-set $border_color_inactive      #18181a
+set $border_color_inactive      #3b3b3e
 
 # Set the background
 exec --no-startup-id ~/.local/scripts/randomimg
