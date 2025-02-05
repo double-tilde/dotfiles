@@ -57,7 +57,7 @@ Here are my dotfiles and some notes for myself if I am rebuilding my system and 
 - Mono alternative: Hack Mono Nerd Font
 - Colors: [Old World Theme](https://github.com/dgox16/oldworld.nvim)
 - WSL2 folder includes a file to copy these colors from for applying to windows terminal
-- Unsplash collection for wallpapers: 984517
+- Unsplash collection for wallpapers: 74420642
 
 ```
 background: #161617
