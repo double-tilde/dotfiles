@@ -25,8 +25,8 @@ export XSERVERRC="$XDG_CONFIG_HOME/X11/xserverrc"
 
 # Defaults
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
-export QT_SCALE_FACTOR=1
-export GDK_SCALE=1
+export GDK_SCALE=1.25
+export QT_SCALE_FACTOR=1.25
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export TERMINAL="alacritty"

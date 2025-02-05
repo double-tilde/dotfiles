@@ -17,7 +17,7 @@ program = "/usr/bin/zsh"
 [font]
 normal.family = "Geist Mono"
 normal.style = "regular"
-size = 13
+size = 15
 
 [window.padding]
 x = 10
