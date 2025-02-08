@@ -9,9 +9,9 @@ return {
 			"nvim-lua/plenary.nvim",
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
-				-- `build` is used to run some command when the plugin is installed/updated.
+				-- build is used to run a command when the plugin is installed/updated.
 				build = "make",
-				-- `cond` is a condition used to determine whether this plugin should be installed and loaded.
+				-- cond is a condition used to determine whether this plugin should be loaded.
 				cond = function()
 					return vim.fn.executable("make") == 1
 				end,
@@ -20,17 +20,9 @@ return {
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
-			-- The easiest way to use Telescope, is to start by doing something like:
-			--  :Telescope help_tags
-
-			-- See `:help telescope` and `:help telescope.setup()`
+			-- The easiest way to use Telescope, is to start with :Telescope help_tags
+			-- See :help telescope and :help telescope.setup()
 			require("telescope").setup({
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
-				-- pickers = {}
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
@@ -42,7 +34,7 @@ return {
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
 
-			-- See `:help telescope.builtin`
+			-- See :help telescope.builtin
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
@@ -55,7 +47,7 @@ return {
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
-			-- Slightly advanced example of overriding default behavior and theme
+			-- Advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
@@ -64,8 +56,7 @@ return {
 				}))
 			end, { desc = "[/] Fuzzily search in current buffer" })
 
-			-- It's also possible to pass additional configuration options.
-			-- See `:help telescope.builtin.live_grep()` for information about particular keys
+			-- See :help telescope.builtin.live_grep()
 			vim.keymap.set("n", "<leader>s/", function()
 				builtin.live_grep({
 					grep_open_files = true,

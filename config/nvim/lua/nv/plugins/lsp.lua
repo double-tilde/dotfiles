@@ -19,7 +19,7 @@ return {
 					},
 				},
 			},
-			-- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
+			-- neodev configures Lua LSP for your Neovim config, runtime and plugins
 			-- used for completion, annotations and signatures of Neovim apis
 			{ "folke/neodev.nvim", opts = {} },
 		},
@@ -29,32 +29,39 @@ return {
 			-- and language tooling communicate in a standardized fashion.
 
 			-- In general, you have a "server" which is some tool built to understand a particular
-			-- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
+			-- language (such as gopls, lua_ls, rust_analyzer, etc.). These Language Servers
 			-- are standalone processes that communicate with some "client" - in this case, Neovim!
 
 			-- Language Servers are external tools that must be installed separately from
-			-- Neovim. This is where `mason` and related plugins come into play.
+			-- Neovim. This is where mason and related plugins come into play.
 			-- If you're wondering about lsp vs treesitter, you can check out the wonderfully
-			-- and elegantly composed help section, `:help lsp-vs-treesitter`
+			-- and elegantly composed help section, :help lsp-vs-treesitter
 
 			-- This function gets run when an LSP attaches to a particular buffer.
 			-- That is to say, every time a new file is opened that is associated with
-			-- an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
+			-- an lsp (for example, opening main.rs is associated with rust_analyzer) this
 			-- function will be executed to configure the current buffer
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
+					local toggleInlay = function()
+						local current_value = vim.lsp.inlay_hint.is_enabled({ bufnr = 0 })
+						vim.lsp.inlay_hint.enable(not current_value, { bufnr = 0 })
+					end
+
 					local map = function(keys, func, desc)
 						vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 					end
 
+					-- Toggle LSP Inlay Hints
+					map("<leader>ti", toggleInlay, "[T]oggle [I]nlays")
 					-- Jump to the definition of the word under your cursor.
 					-- To jump back, press <C-t>.
-					map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+					map("<leader>gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 					-- Find references for the word under your cursor.
-					map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+					map("<leader>gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 					-- Jump to the implementation of the word under your cursor.
-					map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
+					map("<leader>gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 					-- Jump to the type of the word under your cursor.
 					-- Useful when you're not sure what type a variable is and you want to see
 					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
@@ -75,7 +82,7 @@ return {
 					-- or a suggestion from your LSP for this to activate.
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 					-- Opens a popup that displays documentation about the word under your cursor
-					-- See `:help K` for why this keymap.
+					-- See :help K for why this keymap.
 					map("K", vim.lsp.buf.hover, "Hover Documentation")
 					-- This is not Goto Definition, this is Goto Declaration.
 					-- For example, in C this would take you to the header.
@@ -106,10 +113,10 @@ return {
 			--  - cmd (table): Override the default command used to start the server
 			--  - filetypes (table): Override the default list of associated filetypes for the server
 			--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-			--  - settings (table): Override the default settings passed when initializing the server. to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+			--  - settings (table): Override the default settings passed when initializing the server. to see the options for lua_ls, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- See `:help lspconfig-all` for a list of all the pre-configured LSPs
-				-- Some languages (like typescript) have entire language plugins that can be useful: https://github.com/pmizio/typescript-tools.nvim, but for many setups, the LSP (`tsserver`) will work just fine
+				-- See :help lspconfig-all for a list of all the pre-configured LSPs
+				-- Some languages (like typescript) have entire language plugins that can be useful: https://github.com/pmizio/typescript-tools.nvim, but for many setups, the LSP (tsserver) will work just fine
 				gopls = {
 					cmd = { "gopls" },
 					filetypes = { "go", "gomod", "gowork", "gompl" },
@@ -121,6 +128,15 @@ return {
 							analyses = {
 								unusedparams = true,
 							},
+							hints = {
+								assignVariableTypes = true,
+								compositeLiteralFields = true,
+								compositeLiteralTypes = true,
+								constantValues = true,
+								functionTypeParameters = true,
+								parameterNames = true,
+								rangeVariableTypes = true,
+							},
 						},
 					},
 				},
@@ -131,8 +147,11 @@ return {
 							completion = {
 								callSnippet = "Replace",
 							},
-							-- Ignore Lua_LS's noisy `missing-fields` warnings
+							-- Ignore Lua_LS's noisy missing-fields warnings
 							diagnostics = { disable = { "missing-fields" } },
+							hint = {
+								enable = true,
+							},
 						},
 					},
 				},
@@ -140,7 +159,7 @@ return {
 
 			-- Ensure the servers and tools are installed
 			-- To check the current status of installed tools and/or manually install other tools, you can run :Mason
-			-- You can press `g?` for help in this menu.
+			-- You can press g? for help in this menu.
 			require("mason").setup()
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {

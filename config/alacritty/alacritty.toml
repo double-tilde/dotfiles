@@ -24,7 +24,7 @@ x = 10
 y = 10
 
 [window]
-opacity = 0.97
+opacity = 1.0
 
 [scrolling]
 history = 10000

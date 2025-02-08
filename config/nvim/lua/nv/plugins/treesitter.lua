@@ -31,13 +31,13 @@ return {
 			indent = { enable = true, disable = { "ruby" } },
 		},
 		config = function(_, opts)
-			-- See `:help nvim-treesitter`
+			-- See :help nvim-treesitter
 
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup(opts)
 
 			-- There are additional nvim-treesitter modules that you can use to interact
-			-- Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
+			-- Incremental selection: Included, see :help nvim-treesitter-incremental-selection-mod
 			-- Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},

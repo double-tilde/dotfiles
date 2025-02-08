@@ -194,7 +194,7 @@ set $border_color_inactive      #3b3b3e
 
 # Set the background
 exec --no-startup-id ~/.local/scripts/randomimg
-exec --no-startup-id feh --bg-scale ~/.local/wallpapers/bg.jpg
+exec --no-startup-id feh --bg-fill ~/.local/wallpapers/bg.jpg
 
 # Set window border width
 new_window pixel 1

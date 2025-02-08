@@ -1,6 +1,6 @@
 return {
 	{
-		-- Comment uncomment with `gcc`
+		-- Comment uncomment with gcc
 		"numToStr/Comment.nvim",
 		name = "numToStr Smart Commenting",
 		opts = {},

@@ -1,5 +1,5 @@
 -- LazyVim PLugin Manager
--- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+-- See :help lazy.nvim.txt or https://github.com/folke/lazy.nvim for more info
 
 -- Must go first
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -33,8 +33,8 @@ require("lazy").setup({
 	require("nv.plugins.trouble"),
 	require("nv.plugins.whichkey"),
 
-	-- The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-	-- For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
+	-- The import below can automatically add your own plugins, configuration, etc from lua/custom/plugins/*.lua
+	-- For additional information, see :help lazy.nvim-lazy.nvim-structuring-your-plugins
 	-- { import = 'custom.plugins' },
 	-- my plugin
 	-- require("custom.plugins"),

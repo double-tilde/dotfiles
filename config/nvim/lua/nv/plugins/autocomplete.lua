@@ -17,7 +17,7 @@ return {
 				return "make install_jsregexp"
 			end)(),
 			dependencies = {
-				-- `friendly-snippets` contains a variety of premade snippets.
+				-- friendly-snippets contains a variety of premade snippets.
 				-- See the README about individual language/framework/plugin snippets:
 				-- https://github.com/rafamadriz/friendly-snippets
 				-- {
@@ -36,7 +36,7 @@ return {
 		"hrsh7th/cmp-path",
 	},
 	config = function()
-		-- See `:help cmp`
+		-- See :help cmp
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		luasnip.config.setup({})
@@ -50,7 +50,7 @@ return {
 			completion = { completeopt = "menu,menuone,noinsert" },
 
 			-- For an understanding of why these mappings were
-			-- chosen, you will need to read `:help ins-completion`
+			-- chosen, you will need to read :help ins-completion
 			mapping = cmp.mapping.preset.insert({
 				-- Select the [n]ext item
 				["<C-n>"] = cmp.mapping.select_next_item(),
