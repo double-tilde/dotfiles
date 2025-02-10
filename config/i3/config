@@ -34,6 +34,8 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id autotiling
 # Swap capslock and escape key
 exec --no-startup-id "setxkbmap -option caps:swapescape"
+# Set the repeat rate of the keyboard to be a little faster
+exec --no-startup-id "xset r rate 250 58"
 
 # Set lockscreen
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
