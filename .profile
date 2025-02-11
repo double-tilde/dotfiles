@@ -20,7 +20,7 @@ export GDK_SCALE=1.25
 export QT_SCALE_FACTOR=1.25
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 
 # X11

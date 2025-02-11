@@ -61,9 +61,9 @@ tiling_drag modifier titlebar
 
 # Keymaps
 # Start a terminal with tmux
-bindsym $mod+Return exec alacritty -e tmux
+bindsym $mod+Return exec kitty -e tmux
 # Start a terminal
-bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Shift+Return exec kitty
 # Run rofi
 bindsym $mod+space exec --no-startup-id rofi -show drun
 # Start a browser

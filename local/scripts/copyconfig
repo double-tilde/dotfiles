@@ -23,6 +23,7 @@ cp -ar ~/.config/bash/.bashrc ~/docs/dotfiles/config/bash/
 cp -ar ~/.config/dunst/ ~/docs/dotfiles/config/
 cp -ar ~/.config/fastfetch/ ~/docs/dotfiles/config/
 cp -ar ~/.config/i3/ ~/docs/dotfiles/config/
+cp -ar ~/.config/kitty/ ~/docs/dotfiles/config/
 cp -ar ~/.config/nvim/ ~/docs/dotfiles/config/
 cp -ar ~/.config/picom/ ~/docs/dotfiles/config/
 cp -ar ~/.config/polybar/ ~/docs/dotfiles/config/
