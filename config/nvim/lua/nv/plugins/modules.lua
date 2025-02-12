@@ -20,6 +20,21 @@ return {
 		},
 	},
 	{
+		"NTBBloodbath/color-converter.nvim",
+		name = "Color Converter",
+		opts = {},
+		keys = {
+			{
+				"<leader>cc",
+				function()
+					require("color-converter").cycle()
+				end,
+				mode = "n",
+				desc = "[C]olor [C]onverter",
+			},
+		},
+	},
+	{
 		-- Adds git related signs to the gutter, as well as utilities for managing changes
 		"lewis6991/gitsigns.nvim",
 		name = "Git Signs",

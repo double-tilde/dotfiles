@@ -1,6 +1,7 @@
 {
   "CMP Autocomplete": { "branch": "main", "commit": "12509903a5723a876abd65953109f926f4634c30" },
   "Cloak": { "branch": "main", "commit": "648aca6d33ec011dc3166e7af3b38820d01a71e4" },
+  "Color Converter": { "branch": "main", "commit": "5888e92cbccf0de202d2b617f6a8f3011a43bd52" },
   "Conform Formatter": { "branch": "master", "commit": "c309423479f83f561d68d93d74c899f1683834f7" },
   "Fidget": { "branch": "main", "commit": "d9ba6b7bfe29b3119a610892af67602641da778e" },
   "Flash": { "branch": "main", "commit": "f899265876ecdcf7352dbc9f0adf87068cedefbb" },
