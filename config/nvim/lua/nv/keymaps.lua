@@ -24,8 +24,12 @@ vim.keymap.set("i", "<up>", '<cmd>echo "Use k in normal mode to move"<CR>')
 vim.keymap.set("i", "<right>", '<cmd>echo "Use l in normal mode to move"<CR>')
 
 -- Yank and Paste remaps
--- Paste what was last yanked rather than what was deleted
-vim.keymap.set("n", "<leader>p", '"0P', { desc = "Paste what was last yanked" })
+-- Put what was deleted in a different register
+vim.keymap.set("x", "<C-p>", '"_dP', { desc = "Delete visually selected to the void register" })
+-- Paste from the clipboard
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from the clipboard" })
+vim.keymap.set("v", "<leader>p", '"+p', { desc = "Paste from the clipboard" })
+vim.keymap.set("n", "<leader>P", '"+P', { desc = "Paste from the clipboard" })
 -- Yank to the clipboard
 vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank to the clopboard" })
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank to the clopboard" })

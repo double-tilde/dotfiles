@@ -147,9 +147,6 @@ export MANPAGER="nvim +Man!"
 # NPM Aliases
 alias bs-serve="browser-sync --server --files ."
 
-# Global eslint
-export ESLINT_CONFIG=~/.config/eslint/eslintrc.json
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Compilation flags
