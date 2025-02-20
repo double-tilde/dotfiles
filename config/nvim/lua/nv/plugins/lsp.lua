@@ -165,7 +165,7 @@ return {
 			vim.list_extend(ensure_installed, {
 				"html",
 				"cssls",
-				"eslint",
+				"eslint_d",
 				"gofumpt",
 				"goimports",
 				"golangci-lint",

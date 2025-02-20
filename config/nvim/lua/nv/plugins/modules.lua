@@ -22,7 +22,12 @@ return {
 	{
 		"NTBBloodbath/color-converter.nvim",
 		name = "Color Converter",
-		opts = {},
+		opts = {
+			hsl_pattern = "hsl([h]deg, [s], [l])",
+			hsla_pattern = "hsl([h]deg, [s], [l] / [a]%)",
+			rgb_pattern = "rgb([r], [g], [b])",
+			rgba_pattern = "rgb([r], [g], [b], / [a]%)",
+		},
 		keys = {
 			{
 				"<leader>cc",

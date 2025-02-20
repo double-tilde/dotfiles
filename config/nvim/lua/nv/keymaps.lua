@@ -8,6 +8,9 @@ vim.keymap.set("n", "<leader>Q", "<cmd>q<CR>", { desc = "[Q]uit Neovim" })
 -- Save the file
 vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "[W]rite file" })
 
+-- TODO: Remap backtick as I use it in tmux
+-- vim.keymap.set("n", "'", "`", { desc = "Show marks" })
+
 -- Disable arrow keys in normal mode to promote use of the home row
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move"<CR>')
@@ -20,8 +23,13 @@ vim.keymap.set("i", "<down>", '<cmd>echo "Use j in normal mode to move"<CR>')
 vim.keymap.set("i", "<up>", '<cmd>echo "Use k in normal mode to move"<CR>')
 vim.keymap.set("i", "<right>", '<cmd>echo "Use l in normal mode to move"<CR>')
 
--- Paste what was last yanked
-vim.keymap.set("n", "<leader>p", '"0p', { desc = "Paste what was last yanked" })
+-- Yank and Paste remaps
+-- Paste what was last yanked rather than what was deleted
+vim.keymap.set("n", "<leader>p", '"0P', { desc = "Paste what was last yanked" })
+-- Yank to the clipboard
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank to the clopboard" })
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank to the clopboard" })
+vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank to the clopboard" })
 
 -- Toggle relative and absolute line numbers, M = alt
 vim.keymap.set("n", "<M-r>", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative and absolte line numbers" })
@@ -29,6 +37,9 @@ vim.keymap.set("n", "<M-r>", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative
 -- Select a line in visual block mode and use capital J or K to move that line
 vim.keymap.set("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" })
 vim.keymap.set("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move selected lines up" })
+
+-- Better line concatinate
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Concatinate lines without cursor jumps" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -57,6 +68,7 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 
+-- TODO: reconsider these
 -- Remapping common syntax
 vim.keymap.set("i", "<M-u>", "=", { desc = "Press ALT+u to insert an equals symbol" })
 vim.keymap.set("i", "<M-i>", "+", { desc = "Press ALT+i to insert a plus symbol" })

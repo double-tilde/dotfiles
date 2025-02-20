@@ -6,10 +6,9 @@ return {
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
-			javascript = { "eslint" },
-			typescript = { "eslint" },
+			javascript = { "eslint_d" },
+			typescript = { "eslint_d" },
 			go = { "golangcilint" },
-			--   json = { "jsonlint" },
 		}
 
 		-- You can disable the default linters by setting their filetypes to nil:
