@@ -72,15 +72,14 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 
--- TODO: reconsider these
 -- Remapping common syntax
-vim.keymap.set("i", "<M-u>", "=", { desc = "Press ALT+u to insert an equals symbol" })
-vim.keymap.set("i", "<M-i>", "+", { desc = "Press ALT+i to insert a plus symbol" })
-vim.keymap.set("i", "<M-o>", "-", { desc = "Press ALT+o to insert a minus symbol" })
-vim.keymap.set("i", "<M-h>", '""<Esc>i', { desc = "Press ALT+h to insert double quotes and put cursor inside" })
-vim.keymap.set("i", "<M-j>", "{}<Esc>i", { desc = "Press ALT+j to insert curly brackets and put cursor inside" })
-vim.keymap.set("i", "<M-k>", "()<Esc>i", { desc = "Press ALT+k to insert brackets and put cursor inside" })
-vim.keymap.set("i", "<M-l>", "[]<Esc>i", { desc = "Press ALT+l to insert square brackets and put cursor inside" })
+vim.keymap.set("i", "<C-u>", "=", { desc = "Press CTRL+u to insert an equals symbol" })
+vim.keymap.set("i", "<C-i>", "+", { desc = "Press CTRL+i to insert a plus symbol" })
+vim.keymap.set("i", "<C-o>", "-", { desc = "Press CTRL+o to insert a minus symbol" })
+vim.keymap.set("i", "<C-p>", "{}<Esc>i", { desc = "Press CTRL+j to insert curly brackets and put cursor inside" })
+vim.keymap.set("i", "<C-n>", '""<Esc>i', { desc = "Press CTRL+h to insert double quotes and put cursor inside" })
+vim.keymap.set("i", "<C-m>", "()<Esc>i", { desc = "Press CTRL+k to insert brackets and put cursor inside" })
+vim.keymap.set("i", "<C-g>", "[]<Esc>i", { desc = "Press CTRL+l to insert square brackets and put cursor inside" })
 
 -- Quickfix list navigation - using pcall to stop E553 No more items
 vim.keymap.set("n", "<C-n>", function()
