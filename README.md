@@ -74,7 +74,7 @@ Below are some notes on what I like to install on new systems
 ```
 background: #161617
 foreground: #c9c7cd
-background dark= #131314
+background-dark: #131314
 black: #27272a
 subtext1: #b4b1ba
 subtext2: #9f9ca6
