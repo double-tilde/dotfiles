@@ -76,7 +76,7 @@ export PATH=$PATH:$CARGO_HOME/bin
 export FZF_DEFAULT_COMMAND='find . -type f'
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 # Old world theme
-export FZF_DEFAULT_OPTS="--layout=reverse --height=30% --ansi --border bottom --color=fg:#c9c7cd,bg:#131314,hl:#c9c7cd --color=fg+:#92a2d5,bg+:#131314,hl+:#92a2d5 --color=info:#90b99f,prompt:#df6882,pointer:#92a2d5 --color=marker:#90b99f,spinner:#90b99f,header:#e6b99d"
+export FZF_DEFAULT_OPTS="--layout=reverse --height=30% --ansi --border bottom --color=fg:#c9c7cd,bg:#161617,hl:#c9c7cd --color=fg+:#92a2d5,bg+:#161617,hl+:#92a2d5 --color=info:#90b99f,prompt:#df6882,pointer:#92a2d5 --color=marker:#90b99f,spinner:#90b99f,header:#e6b99d"
 source <(fzf --zsh)
 
 # Open nvim in the selected directory

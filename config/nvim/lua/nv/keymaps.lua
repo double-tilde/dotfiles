@@ -8,8 +8,8 @@ vim.keymap.set("n", "<leader>Q", "<cmd>q<CR>", { desc = "[Q]uit Neovim" })
 -- Save the file
 vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "[W]rite file" })
 
--- TODO: Remap backtick as I use it in tmux
--- vim.keymap.set("n", "'", "`", { desc = "Show marks" })
+-- Remap backtick as I use it in tmux
+vim.keymap.set("n", "`", "<cmd>echo 'Tmux prefix'<CR>", { desc = "Disable backtick in normal mode" })
 
 -- Disable arrow keys in normal mode to promote use of the home row
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move"<CR>')

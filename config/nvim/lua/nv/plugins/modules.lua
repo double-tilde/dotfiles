@@ -54,6 +54,26 @@ return {
 		},
 	},
 	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {},
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+		config = function()
+			require("noice").setup({
+				vim.cmd([[highlight NoiceCmdlinePopup guibg=#161617]]),
+			})
+			require("notify").setup({
+				stages = "static",
+				render = "minimal",
+				background_colour = "#161617",
+				timeout = 2000,
+			})
+		end,
+	},
+	{
 		-- Highlight RGB colors
 		"brenoprata10/nvim-highlight-colors",
 		name = "Highlight Colors",
