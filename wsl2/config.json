@@ -1,7 +1,7 @@
 {
   "profiles": {
     "defaults": {
-      "colorScheme": "Tokyo Night Storm",
+      "colorScheme": "Old World",
       "cursorShape": "filledBox",
       "font": {
         "cellHeight": "1.3",
@@ -27,35 +27,12 @@
       "cyan": "#85B5BA",
       "foreground": "#C9C7CD",
       "green": "#90B99F",
-      "name": "Old Wolrd",
+      "name": "Old World",
       "purple": "#ACA1CF",
       "red": "#EA83A5",
       "selectionBackground": "#B7AED5",
       "white": "#353539",
       "yellow": "#E6B99D"
-    },
-    {
-      "background": "#141415",
-      "black": "#141415",
-      "blue": "#6E94B2",
-      "brightBlack": "#333738",
-      "brightBlue": "#6E94B2",
-      "brightCyan": "#90A0B5",
-      "brightGreen": "#8CB66D",
-      "brightPurple": "#7E98E8",
-      "brightRed": "#DF6882",
-      "brightWhite": "#CDCDCD",
-      "brightYellow": "#F3BE7C",
-      "cursorColor": "#CDCDCD",
-      "cyan": "#90A0B5",
-      "foreground": "#CDCDCD",
-      "green": "#8CB66D",
-      "name": "Vague",
-      "purple": "#7E98E8",
-      "red": "#DF6882",
-      "selectionBackground": "#7E98E8",
-      "white": "#333738",
-      "yellow": "#E0A363"
     }
   ],
   "themes": []
