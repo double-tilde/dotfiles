@@ -70,6 +70,7 @@ return {
 				render = "minimal",
 				background_colour = "#161617",
 				timeout = 2000,
+				-- FIX: When using visual line switch, stop cmdline popup
 			})
 		end,
 	},

@@ -16,8 +16,7 @@ require("lazy").setup({
 	require("nv.plugins.autocomplete"),
 	require("nv.plugins.autoformat"),
 	require("nv.plugins.comments"),
-	-- Plugins to look into before enabling
-	-- require 'nv.plugins.debug',
+	require("nv.plugins.debug"),
 	require("nv.plugins.games"),
 	require("nv.plugins.flash"),
 	require("nv.plugins.harpoon"),
