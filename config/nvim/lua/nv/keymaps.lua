@@ -2,9 +2,6 @@
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Press ESC to remove search highlight" })
 
--- Quit neovim
-vim.keymap.set("n", "<leader>Q", "<cmd>q<CR>", { desc = "[Q]uit Neovim" })
-
 -- Save the file
 vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "[W]rite file" })
 

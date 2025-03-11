@@ -28,6 +28,7 @@ return {
 		-- Adds other completion capabilities.
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-cmdline",
 	},
 	config = function()
 		-- See :help cmp
@@ -41,7 +42,24 @@ return {
 					luasnip.lsp_expand(args.body)
 				end,
 			},
-			completion = { completeopt = "menu,menuone,noinsert" },
+			sorting = {
+				comparators = {
+					cmp.config.compare.locality,
+					cmp.config.compare.recently_used,
+					cmp.config.compare.score,
+					cmp.config.compare.offset,
+					cmp.config.compare.order,
+					-- compare.score_offset,
+					-- compare.scopes,
+					-- compare.sort_text,
+					-- compare.exact,
+					-- compare.kind,
+					-- compare.length,
+				},
+			},
+
+			completion = { completeopt = "menu,menuone,noselect" },
+			preselect = cmp.PreselectMode.None,
 
 			mapping = cmp.mapping.preset.insert({
 				-- Select the [n]ext item
@@ -57,11 +75,6 @@ return {
 				["<C-y>"] = cmp.mapping.confirm({ select = true }),
 				-- Manually trigger a completion from nvim-cmp.
 				["<C-Space>"] = cmp.mapping.complete({}),
-				-- Think of <c-l> as moving to the right of your snippet expansion.
-				--  So if you have a snippet that's like:
-				--  function $name($args)
-				--    $body
-				--  end
 				-- <c-l> will move you to the right of each of the expansion locations.
 				["<C-l>"] = cmp.mapping(function()
 					if luasnip.expand_or_locally_jumpable() then
@@ -77,9 +90,10 @@ return {
 				-- https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
 			}),
 			sources = {
-				{ name = "luasnip" },
-				{ name = "nvim_lsp" },
-				{ name = "path" },
+				{ name = "luasnip", priority = 4 },
+				{ name = "nvim_lsp", priority = 3 },
+				{ name = "path", priority = 2 },
+				{ name = "cmdline", priority = 1 },
 			},
 		})
 	end,

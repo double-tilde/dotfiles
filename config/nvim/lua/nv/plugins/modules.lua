@@ -40,52 +40,26 @@ return {
 		},
 	},
 	{
-		-- Adds git related signs to the gutter, as well as utilities for managing changes
 		"lewis6991/gitsigns.nvim",
 		name = "Git Signs",
 		opts = {
 			signs = {
-				add = { text = "+" },
-				change = { text = "~" },
-				delete = { text = "_" },
+				add = { text = "┃" },
+				change = { text = "┃" },
+				delete = { text = "┃" },
 				topdelete = { text = "‾" },
 				changedelete = { text = "~" },
+				untracked = { text = "┆" },
+			},
+			signs_staged = {
+				add = { text = "┃" },
+				change = { text = "┃" },
+				delete = { text = "┃" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
+				untracked = { text = "┆" },
 			},
 		},
-	},
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {},
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-		config = function()
-			require("noice").setup({
-				vim.cmd([[highlight NoiceCmdlinePopup guibg=#161617]]),
-				lsp = {
-					-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-					override = {
-						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-						["vim.lsp.util.stylize_markdown"] = true,
-						["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
-					},
-				},
-				presets = {
-					bottom_search = true,
-					command_palette = true,
-					long_message_to_split = true,
-					lsp_doc_border = true,
-				},
-			})
-			require("notify").setup({
-				stages = "static",
-				render = "minimal",
-				timeout = 2000,
-				background_colour = "#161617",
-			})
-		end,
 	},
 	{
 		-- Highlight RGB colors
@@ -102,15 +76,15 @@ return {
 		opts = {},
 		config = function()
 			-- Better Around/Inside textobjects
-			--  - va)  - [V]isually select [A]round [)]paren
-			--  - yinq - [Y]ank [I]nside [N]ext [']quote
-			--  - ci'  - [C]hange [I]nside [']quote
+			-- va)  - [V]isually select [A]round [)]paren
+			-- yinq - [Y]ank [I]nside [N]ext [']quote
+			-- ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
-			-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-			-- - sd'   - [S]urround [D]elete [']quotes
-			-- - sr)'  - [S]urround [R]eplace [)] [']
+			-- saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
+			-- sd'   - [S]urround [D]elete [']quotes
+			-- sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
 		end,
 	},
@@ -128,6 +102,12 @@ return {
 		config = function()
 			vim.keymap.set("n", "<leader>-", vim.cmd.UndotreeToggle, { desc = "Toggle Undo Tree" })
 		end,
+	},
+	{
+		-- Vim Be Good Game
+		-- Run the following command :VimBeGood
+		"ThePrimeagen/vim-be-good",
+		name = "Vim Be Good",
 	},
 	{
 		-- Detect tabstop and shiftwidth automatically
