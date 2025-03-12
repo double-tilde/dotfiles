@@ -78,7 +78,22 @@ vim.keymap.set("i", "<M-j>", '""<Esc>i', { desc = "Press ALT+j to insert double 
 vim.keymap.set("i", "<M-k>", "()<Esc>i", { desc = "Press ALT+k to insert brackets and put cursor inside" })
 vim.keymap.set("i", "<M-l>", "[]<Esc>i", { desc = "Press ALT+l to insert square brackets and put cursor inside" })
 
--- Quickfix list navigation - using pcall to stop E553 No more items
+-- Substitute Remaps
+vim.keymap.set("v", "<leader>S", 'y:s/<C-r>"//<left>', { desc = "Substite and replace visually selected text" })
+vim.keymap.set(
+	"v",
+	"<leader>gs",
+	'y:%s/<C-r>"//g<left><left>',
+	{ desc = "Substite and replace visually selected text globally" }
+)
+vim.keymap.set(
+	"v",
+	"<leader>gc",
+	'y:%s/<C-r>"//gc<left><left><left>',
+	{ desc = "Substite and replace visually selected text globally confirmed" }
+)
+
+-- Quickfix list navigation - using pcall to stop "E553 No more items"
 vim.keymap.set("n", "<C-n>", function()
 	pcall(function()
 		vim.cmd("cnext")
