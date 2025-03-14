@@ -20,17 +20,19 @@ vim.keymap.set("i", "<down>", '<cmd>echo "Use j in normal mode to move"<CR>')
 vim.keymap.set("i", "<up>", '<cmd>echo "Use k in normal mode to move"<CR>')
 vim.keymap.set("i", "<right>", '<cmd>echo "Use l in normal mode to move"<CR>')
 
--- Yank and Paste remaps
 -- Put what was deleted in a different register
-vim.keymap.set("x", "<C-p>", '"_dP', { desc = "Delete visually selected to the void register" })
+vim.keymap.set("n", "<C-p>", '"_dP', { desc = "Delete visually selected to the void register" })
 -- Paste from the clipboard
-vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from the clipboard" })
-vim.keymap.set("v", "<leader>p", '"+p', { desc = "Paste from the clipboard" })
-vim.keymap.set("n", "<leader>P", '"+P', { desc = "Paste from the clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from the clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "Paste from the clipboard" })
 -- Yank to the clipboard
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank to the clopboard" })
-vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank to the clopboard" })
-vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank to the clopboard" })
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to the clopboard" })
+vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y', { desc = "Yank to the clopboard" })
+-- Delete to Void
+vim.keymap.set({ "n", "v" }, "x", '"_x', { desc = "Delete to void register" })
+vim.keymap.set({ "n", "v" }, "c", '"_c', { desc = "Delete to void register" })
+vim.keymap.set({ "n", "v" }, "C", '"_C', { desc = "Delete to void register" })
+vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Delete to void register" })
 
 -- Toggle relative and absolute line numbers, M = alt
 vim.keymap.set("n", "<M-r>", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative and absolte line numbers" })
@@ -78,7 +80,7 @@ vim.keymap.set("i", "<M-j>", '""<Esc>i', { desc = "Press ALT+j to insert double 
 vim.keymap.set("i", "<M-k>", "()<Esc>i", { desc = "Press ALT+k to insert brackets and put cursor inside" })
 vim.keymap.set("i", "<M-l>", "[]<Esc>i", { desc = "Press ALT+l to insert square brackets and put cursor inside" })
 
--- Substitute Remaps
+-- Substitute remaps
 vim.keymap.set("v", "<leader>S", 'y:s/<C-r>"//<left>', { desc = "Substite and replace visually selected text" })
 vim.keymap.set(
 	"v",

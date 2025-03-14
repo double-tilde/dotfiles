@@ -62,6 +62,16 @@ return {
 		},
 	},
 	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		opts = {
+			disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason", "oil" },
+			hint = false,
+			notification = false,
+			disable_mouse = false,
+		},
+	},
+	{
 		-- Highlight RGB colors
 		"brenoprata10/nvim-highlight-colors",
 		name = "Highlight Colors",
