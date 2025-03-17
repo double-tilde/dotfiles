@@ -6,6 +6,8 @@
 
 # My Dot Files
 
+Here I am testing fugitive
+
 My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) colorscheme for Neovim
 
 ## Colors & Theming
