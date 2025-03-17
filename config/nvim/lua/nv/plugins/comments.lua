@@ -3,6 +3,7 @@ return {
 		-- Comment uncomment with gcc
 		"numToStr/Comment.nvim",
 		name = "numToStr Smart Commenting",
+		event = "VeryLazy",
 		opts = {},
 	},
 	{

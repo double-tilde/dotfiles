@@ -18,6 +18,7 @@ require("lazy").setup({
 	require("nv.plugins.comments"),
 	-- require("nv.plugins.debug"),
 	require("nv.plugins.flash"),
+	require("nv.plugins.fugitive"),
 	require("nv.plugins.harpoon"),
 	require("nv.plugins.lint"),
 	require("nv.plugins.lsp"),

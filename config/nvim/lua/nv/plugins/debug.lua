@@ -1,5 +1,7 @@
 return {
 	"mfussenegger/nvim-dap",
+	name = "Nvim DAP",
+	event = "VeryLazy",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
 
