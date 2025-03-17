@@ -33,6 +33,7 @@ Below are some notes on what I like to install on new systems
 
 - kitty
 - alacritty
+- here is another bullet point
 
 **Terminal / Development Tools**
 
