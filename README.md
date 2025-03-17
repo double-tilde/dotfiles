@@ -6,7 +6,6 @@
 
 # My Dot Files
 
-Here I am testing fugitive
 
 My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) colorscheme for Neovim
 
@@ -33,7 +32,6 @@ Below are some notes on what I like to install on new systems
 
 - kitty
 - alacritty
-- here is another bullet point
 
 **Terminal / Development Tools**
 
