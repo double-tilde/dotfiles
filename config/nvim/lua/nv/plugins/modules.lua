@@ -65,6 +65,7 @@ return {
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim" },
 		opts = {
+			max_count = 5,
 			disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason", "oil" },
 			hint = false,
 			notification = false,
