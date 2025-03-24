@@ -5,9 +5,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Press ESC to remov
 -- Save the file
 vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "[W]rite file" })
 
--- Remap backtick as I use it in tmux
-vim.keymap.set("n", "`", "<cmd>echo 'Tmux prefix'<CR>", { desc = "Disable backtick in normal mode" })
-
 -- Disable arrow keys in normal mode to promote use of the home row
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move"<CR>')
