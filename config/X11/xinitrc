@@ -1,2 +1,4 @@
 xrdb ~/.config/X11/Xresources &
+setxkbmap -option caps:swapescape
+xset r rate 250 55
 exec i3
