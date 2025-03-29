@@ -15,6 +15,7 @@ My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) co
 - Mono alternative font: Hack Mono Nerd Font
 - Colors: [Old World Theme](https://github.com/dgox16/oldworld.nvim)
 - WSL2 folder includes these colors for the windows terminal
+- The directory structure works with GNU Stow so I can use the configs across multiple platforms
 - Most of my background images and tabliss images come from unsplash, particularly:
     - [Tabliss wallpaper collection](https://unsplash.com/collections/74420642/victorian)
     - [British Library](https://unsplash.com/@britishlibrary)
@@ -29,31 +30,22 @@ Below are some notes on what I like to install on new systems
 
 **Terminals**
 
+- wezterm (TODO: setup)
 - kitty
 - alacritty
 
 **Terminal / Development Tools**
 
-- yay (on arch based systems)
-- wget
-- curl
-- git
-- nano
-- vim
 - neovim
 - tmux
-- unzip
 - ripgrep
 - fd-find
 - fzf
 - zsh
 - fastfetch
-- node & npm
-- rust & cargo
 
-**Extras**
+**Extras Notes**
 
-- rofi
 - polybar
 - betterlockscreen
 - autotiling (autotiling for i3)

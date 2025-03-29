@@ -22,6 +22,8 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
+# WSL Default
+export TERM=xterm-256color
 
 # X11
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
@@ -29,13 +31,13 @@ export XSERVERRC="$XDG_CONFIG_HOME/X11/xserverrc"
 
 # Add nvm / npm / node to path
 export NVM_DIR="$XDG_DATA_HOME"/nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # Add cargo to path
 . "$HOME/.config/cargo/env"
 
-# Start X11 on tty1
+# Start X11 on tty1 on linux
 if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
     exec startx
 fi
