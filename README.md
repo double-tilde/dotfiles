@@ -8,6 +8,8 @@
 
 My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) colorscheme for Neovim
 
+TODO: Finish setting up glazewm on windows
+
 ## Colors & Theming
 
 - San-serif font: Karla
