@@ -1,6 +1,11 @@
+general:
+  # Commands to run when the WM has started. This is useful for running a
+  # script or launching another application.
+  # Example: The below command launches Zebar.
   # startup_commands: ['shell-exec zebar']
 
   # Commands to run just before the WM is shutdown.
+  # Example: The below command kills Zebar.
   # shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
 
   # Commands to run after the WM config is reloaded.
@@ -55,7 +60,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: '#8dbcff'
+      color: '#92A2D5'
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -71,20 +76,20 @@ window_effects:
 
     # Change the transparency of the window.
     transparency:
-      enabled: false
+      enabled: true
       # Can be something like '95%' or '0.95' for slightly transparent windows.
       # '0' or '0%' is fully transparent (and, by consequence, unfocusable).
-      opacity: '95%'
+      opacity: '100%'
 
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
       enabled: true
-      color: '#a1a1a1'
+      color: '#353539'
     hide_title_bar:
       enabled: true
     corner_style:
-      enabled: false
+      enabled: true
       style: 'square'
     transparency:
       enabled: true
@@ -204,7 +209,7 @@ keybindings:
 
   # Change focus from tiling windows -> floating -> fullscreen.
   - commands: ['wm-cycle-focus']
-    bindings: ['alt+space']
+    bindings: ['alt+n']
 
   # Change the focused window to be floating.
   - commands: ['toggle-floating --centered']
@@ -238,8 +243,10 @@ keybindings:
   - commands: ['wm-redraw']
     bindings: ['alt+shift+w']
 
-  # Launch terminal.
-  - commands: ['shell-exec wt']
+  # Launch CMD terminal. Alternatively, use `shell-exec wt` or
+  # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
+  # Terminal and Git Bash respectively.
+  - commands: ['shell-exec cmd']
     bindings: ['alt+enter']
 
   # Focus the next/previous active workspace defined in `workspaces` config.
@@ -286,4 +293,3 @@ keybindings:
     bindings: ['alt+shift+4']
   - commands: ['move --workspace 5', 'focus --workspace 5']
     bindings: ['alt+shift+5']
-
