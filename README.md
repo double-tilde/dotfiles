@@ -32,7 +32,7 @@ Below are some notes on what I like to install on new systems
 
 **Terminals**
 
-- wezterm (TODO: setup)
+- wezterm
 - kitty
 - alacritty
 
