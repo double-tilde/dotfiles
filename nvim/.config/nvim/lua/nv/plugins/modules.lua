@@ -22,6 +22,7 @@ return {
 	{
 		"NTBBloodbath/color-converter.nvim",
 		name = "Color Converter",
+		event = "VeryLazy",
 		opts = {
 			hsl_pattern = "hsl([h]deg, [s], [l])",
 			hsla_pattern = "hsl([h]deg, [s], [l] / [a]%)",
@@ -42,6 +43,7 @@ return {
 	{
 		"lewis6991/gitsigns.nvim",
 		name = "Git Signs",
+		event = "VeryLazy",
 		opts = {
 			signs = {
 				add = { text = "┃" },
@@ -77,6 +79,7 @@ return {
 		"brenoprata10/nvim-highlight-colors",
 		name = "Highlight Colors",
 		opts = {},
+		event = "VeryLazy",
 		config = function()
 			require("nvim-highlight-colors").setup({})
 		end,
@@ -110,6 +113,7 @@ return {
 		-- Undo Tree lets you go back through undo-history in a non-linear way
 		"mbbill/undotree",
 		name = "Undo Tree",
+		event = "VeryLazy",
 		config = function()
 			vim.keymap.set("n", "<leader>-", vim.cmd.UndotreeToggle, { desc = "Toggle Undo Tree" })
 		end,
@@ -118,6 +122,7 @@ return {
 		-- Vim Be Good Game
 		-- Run the following command :VimBeGood
 		"ThePrimeagen/vim-be-good",
+		event = "VeryLazy",
 		name = "Vim Be Good",
 	},
 	{
