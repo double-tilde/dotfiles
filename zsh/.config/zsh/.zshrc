@@ -127,13 +127,13 @@ bindkey '^f' fzf-open-nvim
 
 # Use Windows git when working under C:\ drive at work
 # Only enable this function when using WSL2
-# function git() {
-#   if $(pwd -P | grep -q "^\/mnt\/c\/*"); then
-#     git.exe "$@"
-#   else
-#     command git "$@"
-#   fi
-# }
+function git() {
+  if $(pwd -P | grep -q "^\/mnt\/c\/*"); then
+    git.exe "$@"
+  else
+    command git "$@"
+  fi
+}
 
 # Aliases
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
