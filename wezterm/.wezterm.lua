@@ -16,8 +16,7 @@ end
 if hostname == "AmysDesktop" then
 	config.default_domain = "WSL:Ubuntu"
 else
-	-- TODO: Edit this
-	config.default_domain = "WSL:Ubuntu"
+	config.default_domain = "WSL:Ubuntu-20.04"
 end
 
 -- Color Settings
