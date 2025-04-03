@@ -1,0 +1,14 @@
+#! /usr/bin/env zsh
+
+# Remove auto generated files
+rm -rf ~/.bash_history ~/.sudo_as_admin_successful ~/.motd_shown ~/.viminfo ~/.vim ~/.landscape
+
+# Source things
+echo "Sourcing .zshenv"
+source ~/.zshenv || echo "Failed to source .zshenv"
+
+echo "Sourcing .zshrc"
+source ~/.config/zsh/.zshrc || echo "Failed to source .zshrc"
+
+echo "Removing Zone Identifier files"
+find . -name "*Zone.Identifier" -type f -delete

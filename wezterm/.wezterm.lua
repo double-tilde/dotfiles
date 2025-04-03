@@ -6,8 +6,13 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- Open WSL by default
-config.default_domain = "WSL:Ubuntu"
+-- Open WSL by default - At work I use a different distro
+if hostname == "AmysDesktop" then
+	config.default_domain = "WSL:Ubuntu"
+else
+	-- TODO: Edit this
+	config.default_domain = "WSL:Ubuntu"
+end
 
 -- Color Settings
 config.term = "xterm-256color"
@@ -73,4 +78,3 @@ config.window_padding = {
 }
 
 return config
-
