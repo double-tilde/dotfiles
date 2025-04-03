@@ -11,9 +11,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- Set .webc files to be treated as html files
+-- Set .webc  and .php files to be treated as html files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	pattern = "*.webc",
+	pattern = { "*.webc", "*.php" },
 	callback = function()
 		vim.bo.filetype = "html"
 	end,
