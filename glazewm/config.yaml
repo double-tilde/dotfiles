@@ -1,3 +1,9 @@
+#
+# ~~ ~~ ~~ ~~ ~~ ~~ ~~
+# ~~ GLAZEWM CONFIG ~~
+# ~~ ~~ ~~ ~~ ~~ ~~ ~~
+#
+
 general:
   # Commands to run when the WM has started.
   # startup_commands: ['shell-exec zebar']
