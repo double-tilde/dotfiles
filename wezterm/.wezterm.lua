@@ -13,6 +13,7 @@ if wezterm.config_builder then
 end
 
 -- Open WSL by default - At work I use a different distro
+local hostname = wezterm.hostname()
 if hostname == "AmysDesktop" then
 	config.default_domain = "WSL:Ubuntu"
 else
@@ -21,7 +22,6 @@ end
 
 -- Color Settings
 config.term = "xterm-256color"
-config.color_scheme = "Old World"
 
 config.colors = {
 	cursor_bg = "#C9C7CD",
