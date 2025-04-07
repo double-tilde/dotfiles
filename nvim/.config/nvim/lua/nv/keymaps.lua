@@ -31,8 +31,8 @@ vim.keymap.set({ "n", "v" }, "c", '"_c', { desc = "Delete to void register" })
 vim.keymap.set({ "n", "v" }, "C", '"_C', { desc = "Delete to void register" })
 vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Delete to void register" })
 
--- Toggle relative and absolute line numbers, M = alt
-vim.keymap.set("n", "<M-r>", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative and absolte line numbers" })
+-- Toggle relative and absolute line numbers
+vim.keymap.set("n", "<leader>tr", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative and absolte line numbers" })
 
 -- Select a line in visual block mode and use capital J or K to move that line
 vim.keymap.set("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" })
