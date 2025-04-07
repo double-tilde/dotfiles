@@ -8,8 +8,8 @@
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 
 # History
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=5000
+SAVEHIST=5000
 HISTFILE="$HOME/.config/zsh/.zsh_history"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -44,7 +44,7 @@ HYPHEN_INSENSITIVE="true"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm sudo history encode64 copypath colored-man-pages web-search zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git node npm sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,13 +120,12 @@ fzf-open-nvim() {
 }
 
 # zle = zsh line editor, adds the above function to the list of functions
-# type "zle -la" to see a list of functions
+# type "zle -la" to see a list of available functions
 zle -N fzf-open-nvim
 # bind the above function to ctrl f
 bindkey '^f' fzf-open-nvim
 
-# Use Windows git when working under C:\ drive at work
-# Only enable this function when using WSL2
+# Use Windows git when working under C:\ drive
 function git() {
   if $(pwd -P | grep -q "^\/mnt\/c\/*"); then
     git.exe "$@"
@@ -136,13 +135,8 @@ function git() {
 }
 
 # Aliases
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by oh-my-zsh.
 # For a full list of active aliases, run `alias`.
-
-# Bookmarks Shortcut
-alias bm="nvim $HOME/docs/bookmarks"
 
 # Neovim Aliases
 alias vim="nvim"
@@ -152,7 +146,7 @@ alias -s html="nvim"
 alias -s css="nvim"
 alias -s js="nvim"
 alias -s svelte="nvim"
-export MANPAGER="nvim +Man!"
+export MANPAGER="nvim +Man!" # use neovim controls for man entries
 
 # NPM Aliases
 alias bs-serve="browser-sync --server --files ."
