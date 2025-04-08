@@ -11,12 +11,6 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move"<CR>')
 vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move"<CR>')
 
--- Disable arrow keys in insert mode to promote use of the home row
-vim.keymap.set("i", "<left>", '<cmd>echo "Use h in normal mode to move"<CR>')
-vim.keymap.set("i", "<down>", '<cmd>echo "Use j in normal mode to move"<CR>')
-vim.keymap.set("i", "<up>", '<cmd>echo "Use k in normal mode to move"<CR>')
-vim.keymap.set("i", "<right>", '<cmd>echo "Use l in normal mode to move"<CR>')
-
 -- Put what was deleted in a different register
 vim.keymap.set("n", "<C-p>", '"_dP', { desc = "Delete visually selected to the void register" })
 -- Paste from the clipboard

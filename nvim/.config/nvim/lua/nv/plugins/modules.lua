@@ -72,6 +72,12 @@ return {
 			hint = false,
 			notification = false,
 			disable_mouse = false,
+			disabled_keys = {
+				["<Up>"] = {},
+				["<Down>"] = {},
+				["<Left>"] = {},
+				["<Right>"] = {},
+			},
 		},
 	},
 	{
