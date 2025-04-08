@@ -23,71 +23,87 @@ Esc::Capslock
 #j::Send("{Enter}")
 #h::Send("{Backspace}")
 #k::Send("{{}{}}{Left}")
+#l::Send("(){Left}")
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
 
 ; ~~ Resizing and Closing Applications ~~
 ; Maximize the current program with Win+f
 #f::WinMaximize("A")
+; Minimize the current program with Win+m
+#m::WinMinimize("A")
 ; Close the current program with Win+C
 #c::WinClose("A")
+
+; Move the window to the left and right
+#+h::WinMove(0, 0, A_ScreenWidth/2, A_ScreenHeight, "A")
+#+l::WinMove(A_ScreenWidth/2, 0, A_ScreenWidth/2, A_ScreenHeight, "A")
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
 
 ; ~~ Launching Applications ~~
-#Enter::RunAndMaximize(Terminal, TerminalTitle)
+#Enter::RunMax(Terminal, TerminalTitle)
 
-#1::CheckOrRunAndMaximize(Terminal, TerminalTitle)
-#2::CheckOrRunAndMaximize(Browser, BrowserTitle)
-#3::CheckOrRunAndMaximize(BrowserAlt, BrowserAltTitle)
+#1::CheckOrRunMax(Terminal, TerminalTitle)
+#2::CheckOrRunMax(Browser, BrowserTitle)
+#3::CheckOrRunMax(BrowserAlt, BrowserAltTitle)
 
-#8::CheckOrRunAndMaximize(Notes, NotesTitle)
+#8::CheckOrRunMax(Notes, NotesTitle)
 #9::CheckOrRun(NotesAlt, NotesAltTitle)
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
 
 ; Function to run a program and maximize
-RunAndMaximize(program, name) {
+RunMax(program, name) {
+    try {
         Run(program)
         WinWait(name)
         WinActivate
         WinMaximize
-        return
+    } catch {
+        MsgBox("Error: The program '" program "' could not be found or started.")
+    }
+    return
 }
 
 ; Function to check if a prgrom is running, or run it
 CheckOrRun(program, name) {
-    if WinExist("ahk_exe " program) {
-        WinActivate
-    }
-    else if WinExist(name)
-    {
-        WinActivate(name)
-    }
-    else
-    {
-        Run(program)
-        WinWait(name)
-        WinActivate
+    try {
+        if WinExist("ahk_exe " program) {
+            WinActivate
+        }
+        else if WinExist(name) {
+            WinActivate(name)
+        }
+        else {
+            Run(program)
+            WinWait(name)
+            WinActivate
+        }
+    } catch {
+        MsgBox("Error: The program '" program "' could not be found or started.")
     }
     return
 }
 
 ; Function to check if program is running and maximize, or run it and maximize
-CheckOrRunAndMaximize(program, name) {
-    if WinExist("ahk_exe " program) {
-        WinActivate
-        WinMaximize
-    }
-    else if WinExist(name)
-    {
-        WinActivate(name)
-        WinMaximize
-    }
-    else
-    {
-        Run(program)
-        WinWait(name)
-        WinActivate
-        WinMaximize
+CheckOrRunMax(program, name) {
+    try {
+        if WinExist("ahk_exe " program) {
+            WinActivate
+            WinMaximize
+        }
+        else if WinExist(name)
+        {
+            WinActivate(name)
+            WinMaximize
+        }
+        else
+        {
+            Run(program)
+            WinWait(name)
+            WinActivate
+            WinMaximize
+        }
+    } catch {
+        MsgBox("Error: The program '" program "' could not be found or started.")
     }
     return
 }
-
