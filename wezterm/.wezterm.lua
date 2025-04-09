@@ -74,6 +74,7 @@ config.use_fancy_tab_bar = false
 
 -- Window Settings
 config.window_decorations = "NONE | RESIZE"
+config.window_background_image = "./wezterm.jpg"
 config.window_background_opacity = 1.0
 config.window_padding = {
 	left = 8,
