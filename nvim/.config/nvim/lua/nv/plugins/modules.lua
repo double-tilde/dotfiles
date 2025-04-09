@@ -125,12 +125,13 @@ return {
 		end,
 	},
 	{
-		'arnamak/stay-centered.nvim',
+		"arnamak/stay-centered.nvim",
 		name = "Stay Cenetered",
-		opts = {
+		config = function()
+			require("stay-centered").setup({
 			disable_on_mouse = false,
-		},
-		event = "VeryLazy",
+			})
+		end,
 	},
 	{
 		-- Vim Be Good Game
