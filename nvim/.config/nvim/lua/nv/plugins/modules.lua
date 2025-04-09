@@ -125,6 +125,14 @@ return {
 		end,
 	},
 	{
+		'arnamak/stay-centered.nvim',
+		name = "Stay Cenetered",
+		opts = {
+			disable_on_mouse = false,
+		},
+		event = "VeryLazy",
+	},
+	{
 		-- Vim Be Good Game
 		-- Run the following command :VimBeGood
 		"ThePrimeagen/vim-be-good",
