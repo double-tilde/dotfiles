@@ -9,8 +9,6 @@ Terminal := "wezterm-gui.exe"
 TerminalTitle := "~"
 Browser := "firefox.exe"
 BrowserTitle := "Mozilla Firefox"
-BrowserAlt := "chrome.exe"
-BrowserAltTitle := "Google Chrome"
 Notes := "Obsidian.exe" ; Full path added to Environment Variables
 NotesTitle := "Obsdian"
 NotesAlt := "notepad.exe"
@@ -44,7 +42,6 @@ Esc::Capslock
 
 #1::CheckOrRunMax(Terminal, TerminalTitle)
 #2::CheckOrRunMax(Browser, BrowserTitle)
-#3::CheckOrRunMax(BrowserAlt, BrowserAltTitle)
 
 #8::CheckOrRunMax(Notes, NotesTitle)
 #9::CheckOrRun(NotesAlt, NotesAltTitle)
