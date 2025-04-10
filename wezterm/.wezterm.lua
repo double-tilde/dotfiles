@@ -14,7 +14,7 @@ end
 
 -- Open WSL by default - At work I use a different distro
 local hostname = wezterm.hostname()
-if hostname == "AmysDesktop" then
+if hostname == "double-tilde" then
 	config.default_domain = "WSL:Ubuntu"
 else
 	config.default_domain = "WSL:Ubuntu-20.04"
