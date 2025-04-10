@@ -104,7 +104,7 @@ fzf-open-nvim() {
     exclude_args+=(--exclude "$dir")
   done
 
-  local selected=$(fd -L --type f --type d --type l --hidden . ~ "${exclude_args[@]}" | fzf)
+  local selected=$(fd -L -d 6 --type f --type d --type l --hidden . ~ "${exclude_args[@]}" | fzf)
 
   if [[ -z "$selected" ]]; then
     echo "Nothing selected."
