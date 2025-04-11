@@ -116,21 +116,30 @@ return {
 		---@module 'render-markdown'
 	},
 	{
-		-- Undo Tree lets you go back through undo-history in a non-linear way
-		"mbbill/undotree",
-		name = "Undo Tree",
-		event = "VeryLazy",
-		config = function()
-			vim.keymap.set("n", "<leader>-", vim.cmd.UndotreeToggle, { desc = "Toggle Undo Tree" })
-		end,
+		"Aasim-A/scrollEOF.nvim",
+		event = { "CursorMoved", "WinScrolled" },
+		opts = {
+			insert_mode = true,
+			floating = false,
+			disabled_filetypes = {},
+		},
 	},
 	{
 		"arnamak/stay-centered.nvim",
 		name = "Stay Cenetered",
 		config = function()
 			require("stay-centered").setup({
-			disable_on_mouse = false,
+				disable_on_mouse = false,
 			})
+		end,
+	},
+	{
+		-- Undo Tree lets you go back through undo-history in a non-linear way
+		"mbbill/undotree",
+		name = "Undo Tree",
+		event = "VeryLazy",
+		config = function()
+			vim.keymap.set("n", "<leader>-", vim.cmd.UndotreeToggle, { desc = "Toggle Undo Tree" })
 		end,
 	},
 	{
@@ -146,3 +155,4 @@ return {
 		name = "Sleuth",
 	},
 }
+
