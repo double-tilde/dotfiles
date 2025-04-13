@@ -28,9 +28,9 @@ vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Delete to void register" })
 -- Toggle relative and absolute line numbers
 vim.keymap.set("n", "<leader>tr", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative and absolte line numbers" })
 
--- Select a line in visual block mode and use capital J or K to move that line
-vim.keymap.set("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" })
-vim.keymap.set("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move selected lines up" })
+-- Select a line in visual block mode and use capital J or K to move that line and keep the cursor centered
+vim.keymap.set("v", "J", ":move '>+1<CR>gv-gvzz", { desc = "Move selected lines down and center the cursor" })
+vim.keymap.set("v", "K", ":move '<-2<CR>gv-gvzz", { desc = "Move selected lines up and center the cursor" })
 
 -- Better line concatinate
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Concatinate lines without cursor jumps" })

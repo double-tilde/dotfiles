@@ -26,9 +26,9 @@ Esc::Capslock
 
 ; ~~ Resizing and Closing Applications ~~
 ; Maximize the current program with Win+f
-#f::WinMaximize("A")
+#f::Maximize()
 ; Minimize the current program with Win+m
-#m::WinMinimize("A")
+#m::Minimize()
 ; Close the current program with Win+C
 #c::WinClose("A")
 
@@ -46,6 +46,24 @@ Esc::Capslock
 #8::CheckOrRunMax(Notes, NotesTitle)
 #9::CheckOrRun(NotesAlt, NotesAltTitle)
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
+
+; Function to maximize the focused program
+Maximize() {
+    try {
+        WinMaximize("A")
+    } catch {
+        MsgBox("Error: No program in focus to maximize.")
+    }
+}
+
+; Function to minimize the focused program
+Minimize() {
+    try {
+        WinMinimize("A")
+    } catch {
+        MsgBox("Error: No program in foucs to minimize.")
+    }
+}
 
 ; Function to run a program and maximize
 RunMax(program, name) {
@@ -85,11 +103,13 @@ CheckOrRunMax(program, name) {
     try {
         if WinExist("ahk_exe " program) {
             WinActivate
+            WinWait
             WinMaximize
         }
         else if WinExist(name)
         {
             WinActivate(name)
+            WinWait(name)
             WinMaximize
         }
         else
