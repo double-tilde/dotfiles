@@ -116,22 +116,12 @@ return {
 		---@module 'render-markdown'
 	},
 	{
-		"Aasim-A/scrollEOF.nvim",
-		event = { "CursorMoved", "WinScrolled" },
-		opts = {
-			insert_mode = true,
-			floating = false,
-			disabled_filetypes = {},
-		},
-	},
-	{
 		"arnamak/stay-centered.nvim",
-		name = "Stay Cenetered",
-		config = function()
-			require("stay-centered").setup({
-				disable_on_mouse = false,
-			})
-		end,
+		name = "Stay centered",
+		lazy = false,
+		opts = {
+			skip_filetypes = {},
+		},
 	},
 	{
 		-- Undo Tree lets you go back through undo-history in a non-linear way
@@ -155,4 +145,3 @@ return {
 		name = "Sleuth",
 	},
 }
-

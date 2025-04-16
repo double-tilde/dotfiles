@@ -78,4 +78,6 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 100
+-- NOTE: Whilst using Stay Centered I do not need this setting
+-- Stay Centered works better in insert mode at the EOF
+-- vim.opt.scrolloff = 999

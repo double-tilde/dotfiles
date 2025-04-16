@@ -41,19 +41,6 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagn
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Open [D]iagnostic [Q]uickfix list" })
 
--- Vertical movements
--- When moving up and down, keep the cursor in the center of the window
-vim.keymap.set("n", "j", "jzz", { desc = "Go down and center the cursor" })
-vim.keymap.set("n", "k", "kzz", { desc = "Go up and center the cursor" })
--- When jumping by half a page up and down, keep the cursor in the center of the window
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Go a page down and center the cursor" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Go a page up and center the cursor" })
--- When jumping by paragraph, keep the cursor in the center of the window
-vim.keymap.set("n", "{", "{zz", { desc = "Go to the next paragraph and center the cursor" })
-vim.keymap.set("n", "}", "}zz", { desc = "Go to the next paragraph and center the cursor" })
--- When moving to the bottom of the file and center the cursor
-vim.keymap.set("n", "G", "Gzz", { desc = "Go to the bottom of the file and center the cursor" })
-
 -- Search movements
 -- When jumping through search results, keep the cursor in the center of the window
 vim.keymap.set("n", "n", "nzz", { desc = "Go to the next search result and center the cursor" })
