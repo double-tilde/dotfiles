@@ -1,6 +1,0 @@
--- TODO: I would like to make a plugin that does the following:
---	- Activate the plugin using <leader>ff
---	- Highlights all of the special characters on the current line
---	- Replaces them like whichkey does, with letters from the home row
---	- Use those letters to jump to that special character
---	- After jumping, clear the highlight and revert the letters to original state

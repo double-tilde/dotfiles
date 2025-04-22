@@ -31,11 +31,9 @@ require("lazy").setup({
 	require("nv.plugins.treesitter"),
 	require("nv.plugins.trouble"),
 
-	-- The import below can automatically add your own plugins, configuration, etc from lua/custom/plugins/*.lua
 	-- For additional information, see :help lazy.nvim-lazy.nvim-structuring-your-plugins
 	-- { import = 'custom.plugins' },
-	-- my plugin
-	-- require("custom.plugins"),
+	require("custom.plugins.quickly"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
