@@ -13,6 +13,8 @@ Notes := "Obsidian.exe" ; Full path added to Environment Variables
 NotesTitle := "Obsdian"
 NotesAlt := "notepad.exe"
 NotesAltTitle := "Notepad"
+Explorer := "explorer"
+ExplorerTitle := "Explorer"
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
 
 ; ~~ Key Remaps and shortcuts ~~
@@ -45,6 +47,8 @@ Esc::Capslock
 
 #8::CheckOrRunMax(Notes, NotesTitle)
 #9::CheckOrRun(NotesAlt, NotesAltTitle)
+
+#e::CheckOrRun(Explorer, ExplorerTitle)
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
 
 ; Function to maximize the focused program
@@ -83,14 +87,17 @@ CheckOrRun(program, name) {
     try {
         if WinExist("ahk_exe " program) {
             WinActivate
+            CenterWindow(name)
         }
         else if WinExist(name) {
             WinActivate(name)
+            CenterWindow(name)
         }
         else {
             Run(program)
             WinWait(name)
             WinActivate
+            CenterWindow(name)
         }
     } catch {
         MsgBox("Error: The program '" program "' could not be found or started.")
@@ -123,4 +130,11 @@ CheckOrRunMax(program, name) {
         MsgBox("Error: The program '" program "' could not be found or started.")
     }
     return
+}
+
+; Function to center the current program
+CenterWindow(WinTitle)
+{
+    WinGetPos ,, &Width, &Height, WinTitle
+    WinMove (A_ScreenWidth/2)-(Width/2), (A_ScreenHeight/2)-(Height/2),,, WinTitle
 }
