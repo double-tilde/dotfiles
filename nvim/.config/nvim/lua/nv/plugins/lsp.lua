@@ -57,17 +57,29 @@ return {
 					map("<leader>ti", toggleInlay, "[T]oggle [I]nlays")
 					-- Jump to the definition of the word under your cursor.
 					-- To jump back, press <C-t>.
-					map("<leader>gd", function() require("telescope.builtin").lsp_definitions(); vim.cmd("normal! zz") end, "[G]oto [D]efinition")
+					map("<leader>gd", function()
+						require("telescope.builtin").lsp_definitions()
+						vim.cmd("normal! zz")
+					end, "[G]oto [D]efinition")
 					-- Find references for the word under your cursor.
-					map("<leader>gr", function() require("telescope.builtin").lsp_references(); vim.cmd("normal! zz") end, "[G]oto [R]eferences")
+					map("<leader>gr", function()
+						require("telescope.builtin").lsp_references()
+						vim.cmd("normal! zz")
+					end, "[G]oto [R]eferences")
 					-- Jump to the implementation of the word under your cursor.
-					map("<leader>gI", function() require("telescope.builtin").lsp_implementations(); vim.cmd("normal! zz") end, "[G]oto [I]mplementation")
+					map("<leader>gI", function()
+						require("telescope.builtin").lsp_implementations()
+						vim.cmd("normal! zz")
+					end, "[G]oto [I]mplementation")
 					-- Jump to the type of the word under your cursor.
 					-- Useful when you're not sure what type a variable is and you want to see
 					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
 					-- Fuzzy find all the symbols in your current document.
 					-- Symbols are things like variables, functions, types, etc.
-					map("<leader>ds", function() require("telescope.builtin").lsp_document_symbols(); vim.cmd("normal! zz") end, "[D]ocument [S]ymbols")
+					map("<leader>ds", function()
+						require("telescope.builtin").lsp_document_symbols()
+						vim.cmd("normal! zz")
+					end, "[D]ocument [S]ymbols")
 					-- Fuzzy find all the symbols in your current workspace.
 					-- Similar to document symbols, except searches over your entire project.
 					map(
@@ -86,7 +98,10 @@ return {
 					map("K", vim.lsp.buf.hover, "Hover Documentation")
 					-- This is not Goto Definition, this is Goto Declaration.
 					-- For example, in C this would take you to the header.
-					map("gD", function() vim.lsp.buf.declaration(); vim.cmd("normal! zz") end, "[G]oto [D]eclaration")
+					map("gD", function()
+						vim.lsp.buf.declaration()
+						vim.cmd("normal! zz")
+					end, "[G]oto [D]eclaration")
 					-- The following two autocommands are used to highlight references of the
 					-- word under your cursor when your cursor rests there for a little while.
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
@@ -140,6 +155,9 @@ return {
 						},
 					},
 				},
+				pyright = {
+					filetypes = { "python" },
+				},
 				lua_ls = {
 					-- capabilities = {},
 					settings = {
@@ -163,7 +181,7 @@ return {
 			require("mason").setup()
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
-				"html",
+				"black",
 				"cssls",
 				"eslint_d",
 				"gofumpt",
@@ -171,8 +189,12 @@ return {
 				"golangci-lint",
 				"golines",
 				"gopls",
+				"html",
+				"isort",
 				"php-cs-fixer",
 				"prettier",
+				"pyright",
+				-- "ruff",
 				"stylua",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

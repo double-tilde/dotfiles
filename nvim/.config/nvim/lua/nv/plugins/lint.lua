@@ -9,6 +9,7 @@ return {
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
 			go = { "golangcilint" },
+			-- python = { "ruff" },
 		}
 
 		-- You can disable the default linters by setting their filetypes to nil:
