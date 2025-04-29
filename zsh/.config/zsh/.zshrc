@@ -134,6 +134,15 @@ function git() {
   fi
 }
 
+# Use Windows lazygit (installed with scopp) when working under C:\ drive
+function lazygit() {
+  if $(pwd -P | grep -q "^\/mnt\/c\/*"); then
+    lazygit.exe "$@"
+  else
+    command lazygit "$@"
+  fi
+}
+
 # Aliases
 # Set personal aliases, overriding those provided by oh-my-zsh.
 # For a full list of active aliases, run `alias`.
