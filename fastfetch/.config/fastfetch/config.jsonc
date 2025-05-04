@@ -17,7 +17,7 @@
     "terminalfont",
     "cpu",
     "gpu",
-   "memory",
+    "memory",
     "break",
     "colors"
   ]

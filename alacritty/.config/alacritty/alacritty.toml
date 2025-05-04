@@ -15,7 +15,7 @@ TERM = "xterm-256color"
 program = "/usr/bin/zsh"
 
 [font]
-normal.family = "Geist Mono"
+normal.family = "GeistMono Nerd Font"
 normal.style = "regular"
 size = 15
 
