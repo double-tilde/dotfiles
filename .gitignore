@@ -1,3 +1,4 @@
 tmux/.config/tmux/plugins/
 zsh/.config/zsh/.oh-my-zsh/
 zsh/.config/zsh/.zsh_history
+zsh/.config/zsh/.zcompdump*
