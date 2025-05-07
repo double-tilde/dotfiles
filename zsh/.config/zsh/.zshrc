@@ -127,7 +127,7 @@ bindkey '^f' fzf-open-nvim
 
 # Use Windows git when working under C:\ drive
 function git() {
-  if $(pwd -P | grep -q "^\/mnt\/c\/*"); then
+  if $(pwd -P | grep -q "^/mnt/c/*"); then
     git.exe "$@"
   else
     command git "$@"
@@ -136,7 +136,7 @@ function git() {
 
 # Use Windows lazygit (installed with scopp) when working under C:\ drive
 function lazygit() {
-  if $(pwd -P | grep -q "^\/mnt\/c\/*"); then
+  if $(pwd -P | grep -q "^/mnt/c/*"); then
     lazygit.exe "$@"
   else
     command lazygit "$@"
