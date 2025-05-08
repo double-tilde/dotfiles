@@ -110,7 +110,7 @@ config.keys = {
 	},
 	{
 		mods = "LEADER",
-		key = "c",
+		key = "x",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 	{
