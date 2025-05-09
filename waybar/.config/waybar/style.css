@@ -2,7 +2,7 @@
 	border: none;
 	border-radius: 0;
 	min-height: 0;
-	font-family: "karla";
+	font-family: "karla", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	padding: 0;
@@ -14,27 +14,29 @@ window#waybar {
 
 tooltip {
 	background-color: #161617;
-	border: 1px solid #353539;
+	border: 1px solid #27272a;
 }
 
-#clock,
 #tray,
-#memory,
 #battery,
 #custom-brightness,
+#cpu,
+#memory,
 #network,
-#pulseaudio {
-	padding: 2px 6px;
+#pulseaudio,
+#clock,
+#custom-power {
+	padding: 2px 8px;
 }
 
 #workspaces {
-	background-color: #353539;
+	background-color: #27272a;
 }
 
 #workspaces button {
 	all: initial;
 	min-width: 0;
-	padding: 2px 6px;
+	padding: 2px 8px;
 	color: #92a2d5;
 	border-bottom: 2px solid transparent;
 }
@@ -42,36 +44,40 @@ tooltip {
 #workspaces button.active,
 #workspaces button:active,
 #workspaces button:hover {
-	color: #85b5ba;
+	color: #c9c7cd;
 	border-bottom: 2px solid #c9c7cd;
 }
 
 #workspaces button.urgent {
 	color: #c9c7cd;
-	background-color: #ea83a5;
+	border-bottom: 2px solid #ea83a5;
 }
 
 #window {
+	padding: 2px 8px;
+	background-color: #27272a;
 	color: #c9c7cd;
 }
 
 #clock,
 #tray {
-	background-color: #353539;
+	background-color: #27272a;
 	color: #92a2d5;
 }
 
-#battery {
-	background-color: #353539;
-	color: #90b99f;
-}
-
-#memory,
+#battery,
 #custom-brightness,
+#cpu,
+#memory,
 #network,
 #pulseaudio {
-	background-color: #353539;
+	background-color: #27272a;
 	color: #c9c7cd;
+}
+
+#custom-power {
+	background-color: #27272a;
+	color: #ea83a5;
 }
 
 #memory.critical,

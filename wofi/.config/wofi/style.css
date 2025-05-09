@@ -2,7 +2,7 @@ window {
 	margin: 0;
 	padding: 0;
 	box-shadow: none;
-	border: 2px solid #92a2d5;
+	border: 1px solid #92a2d5;
 	background-color: #161617;
 }
 
@@ -10,8 +10,10 @@ window {
 	margin: 5px;
 	border: none;
 	border-radius: 0px;
-	color: #e6b99d;
+	color: #c9c7cd;
 	background-color: #353539;
+	font-family: "karla", sans-serif;
+	font-size: 18px;
 }
 
 #input:focus {
@@ -39,8 +41,16 @@ window {
 	margin: 5px;
 	border: none;
 	color: #c9c7cd;
+	font-family: "karla", sans-serif;
+	font-size: 18px;
 }
 
 #entry:selected {
 	background-color: #353539;
+	color: #90b99f;
 }
+
+#entry:selected #text {
+	color: #90b99f;
+}
+

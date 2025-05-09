@@ -18,6 +18,10 @@ cd ~ && mkdir ~/.local && mkdir ~.local/share && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
 && nvm install --lts || { echo "failed to install npm"; return 1; }
 
+curl https://sh.rustup.rs -sSf | sh || { echo "failed to install rust"; return 1; }
+
+yay -S go python python-pip || { echo "failed to install go any python"; return 1; }
+
 # Install yay
 if ! command -v yay &>/dev/null; then
 	git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si \
@@ -27,7 +31,7 @@ fi
 # Install hyprland
 if ! command -v hyprland &>/dev/null; then
 	yay -S --noconfirm wayland xdg-desktop-portal xdg-desktop-portal-wlr dunst waybar \
-	hyprpaper grim slurp wl-clipboard wofi dunst || { echo "failed to install hyprland"; return 1; }
+	hyprpaper grim slurp wl-clipboard wofi dunst swaylock-effects swayidle || { echo "failed to install hyprland"; return 1; }
 fi
 
 # Install fonts
@@ -58,7 +62,7 @@ if ! command -v pavucontrol &>/dev/null; then
 fi
 
 # Install extras
-yay -S --noconfirm firefox obs-studio vlc mpv gimp htop fastfetch \
+yay -S --noconfirm firefox obs-studio vlc mpv gimp htop fastfetch brightnessctl \
 || { echo "failed to install extra tools"; return 1; }
 
 # Enable system services

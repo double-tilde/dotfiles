@@ -1,7 +1,8 @@
 #! /usr/bin/env zsh
 
 # Remove auto generated files
-rm -rf ~/.bash* ~/.motd_shown ~/.viminfo ~/.vim ~/.landscape ~/.python_history
+rm -rf ~/.motd_shown ~/.viminfo ~/.vim ~/.landscape ~/.python_history
+rm -rf ~/.bash*
 
 # Source things
 echo "Sourcing .profile"
