@@ -14,13 +14,19 @@ done
 cd ~
 
 # Install programming languges
-cd ~ && mkdir ~/.local && mkdir ~.local/share && \
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
-&& nvm install --lts || { echo "failed to install npm"; return 1; }
+if ! command -v npm &>/dev/null; then
+	cd ~ && mkdir ~/.local && mkdir ~/.local/share && mkdir ~/.local/share/nvm && \
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
+	&& nvm install --lts || { echo "failed to install npm"; return 1; }
+fi
 
 curl https://sh.rustup.rs -sSf | sh || { echo "failed to install rust"; return 1; }
+sudo mv ~/.cargo ~/.config/cargo && sudo mv ~/.rustup ~/.config/rustup
 
-yay -S go python python-pip || { echo "failed to install go any python"; return 1; }
+
+if ! command -v go &>/dev/null; then
+	yay -S --noconfirm go python python-pip || { echo "failed to install go any python"; return 1; }
+fi
 
 # Install yay
 if ! command -v yay &>/dev/null; then
@@ -30,7 +36,7 @@ fi
 
 # Install hyprland
 if ! command -v hyprland &>/dev/null; then
-	yay -S --noconfirm wayland xdg-desktop-portal xdg-desktop-portal-wlr dunst waybar \
+	yay -S --noconfirm wayland hyprland xdg-desktop-portal xdg-desktop-portal-wlr dunst waybar \
 	hyprpaper grim slurp wl-clipboard wofi dunst swaylock-effects swayidle || { echo "failed to install hyprland"; return 1; }
 fi
 
@@ -47,13 +53,17 @@ if ! command -v zsh &>/dev/null; then
 fi
 
 # Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting || { echo "failed to install oh my zsh"; return 1; }
+if command -v zsh; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting || { echo "failed to install oh my zsh"; return 1; }
+fi
 
 # Install Tmux Plugin Manager
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm \
-|| { echo "failed to install tpm"; return 1; }
+if command -v tmux; then
+	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm \
+	|| { echo "failed to install tpm"; return 1; }
+fi
 
 # Install Audio tools
 if ! command -v pavucontrol &>/dev/null; then
@@ -62,13 +72,14 @@ if ! command -v pavucontrol &>/dev/null; then
 fi
 
 # Install extras
-yay -S --noconfirm firefox obs-studio vlc mpv gimp htop fastfetch brightnessctl \
-|| { echo "failed to install extra tools"; return 1; }
+if ! command -v firefox &>/dev/null; then
+	yay -S --noconfirm firefox obs-studio obsidian vlc mpv gimp htop fastfetch brightnessctl \
+	|| { echo "failed to install extra tools"; return 1; }
+fi
 
 # Enable system services
 sudo systemctl enable --now NetworkManager
 sudo systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 # Cleanup
-yay -Sc --noconfirm # clean package cache
-
+yay -Sc --noconfirm
