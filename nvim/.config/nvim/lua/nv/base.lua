@@ -80,6 +80,9 @@ vim.opt.cursorline = true
 -- Enable inline diagnostics by default
 vim.diagnostic.config({ virtual_text = true })
 
+-- Set defaults for borders
+vim.opt.winborder = "single"
+
 -- Minimal number of screen lines to keep above and below the cursor.
 -- NOTE: Whilst using Stay Centered I do not need this setting
 -- Stay Centered works better in insert mode at the EOF

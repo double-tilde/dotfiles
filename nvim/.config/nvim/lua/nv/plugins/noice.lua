@@ -8,7 +8,14 @@ return {
 	},
 	config = function()
 		require("noice").setup({
-			vim.cmd([[highlight NoiceCmdlinePopup guibg=#161617]]),
+
+			-- NOTE: These can probably be removed when 0.11 is adopted more
+			vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = "#161617", fg = "#92a2d5" }),
+			vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { bg = "#161617", fg = "#92a2d5" }),
+			vim.api.nvim_set_hl(0, "NoiceLspProgressTitle", { fg = "#92a2d5", bold = true }),
+			vim.api.nvim_set_hl(0, "NoiceLspProgressClient", { fg = "#c9c7cd" }),
+			vim.api.nvim_set_hl(0, "NoiceLspProgressSpinner", { fg = "#c9c7cd" }),
+
 			lsp = {
 				-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
 				override = {
@@ -27,7 +34,7 @@ return {
 		require("notify").setup({
 			stages = "static",
 			render = "minimal",
-			timeout = 2000,
+			timeout = 1500,
 			background_colour = "#161617",
 		})
 	end,
