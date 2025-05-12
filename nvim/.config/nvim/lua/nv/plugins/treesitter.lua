@@ -82,7 +82,7 @@ return {
 									["]c"] = { query = "@class.outer", desc = "Next class start" },
 									["]i"] = { query = "@conditional.outer", desc = "Next conditional start" },
 									["]l"] = { query = "@loop.outer", desc = "Next loop start" },
-
+									["]t"] = { query = "@tag.outer", desc = "Next tag start" },
 									["]s"] = { query = "@scope", query_group = "locals", desc = "Next scope" },
 									["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
 								},
@@ -92,6 +92,7 @@ return {
 									["]C"] = { query = "@class.outer", desc = "Next class end" },
 									["]I"] = { query = "@conditional.outer", desc = "Next conditional end" },
 									["]L"] = { query = "@loop.outer", desc = "Next loop end" },
+									["]T"] = { query = "@tag.outer", desc = "Next tag end" },
 								},
 								goto_previous_start = {
 									["[f"] = { query = "@call.outer", desc = "Prev function call start" },
@@ -99,6 +100,7 @@ return {
 									["[c"] = { query = "@class.outer", desc = "Prev class start" },
 									["[i"] = { query = "@conditional.outer", desc = "Prev conditional start" },
 									["[l"] = { query = "@loop.outer", desc = "Prev loop start" },
+									["[t"] = { query = "@tag.outer", desc = "Prev tag start" },
 								},
 								goto_previous_end = {
 									["[F"] = { query = "@call.outer", desc = "Prev function call end" },
@@ -106,6 +108,7 @@ return {
 									["[C"] = { query = "@class.outer", desc = "Prev class end" },
 									["[I"] = { query = "@conditional.outer", desc = "Prev conditional end" },
 									["[L"] = { query = "@loop.outer", desc = "Prev loop end" },
+									["[T"] = { query = "@tag.outer", desc = "Prev tag end" },
 								},
 							},
 						},
