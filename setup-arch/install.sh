@@ -73,8 +73,8 @@ fi
 
 # Install extras
 if ! command -v firefox &>/dev/null; then
-	yay -S --noconfirm firefox obs-studio obsidian vlc mpv gimp htop fastfetch brightnessctl \
-	|| { echo "failed to install extra tools"; return 1; }
+	yay -S --noconfirm firefox dolphin obs-studio obsidian vlc mpv gimp \
+	htop fastfetch brightnessctl || { echo "failed to install extra tools"; return 1; }
 fi
 
 # Enable system services
