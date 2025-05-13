@@ -105,3 +105,11 @@ vim.keymap.set("n", "<leader>q", function()
 		vim.cmd("copen")
 	end
 end, { desc = "Toggle quickfix list visibility" })
+
+-- HTML tag navigation with TS HTML
+vim.keymap.set("n", "]r", function()
+	require("tshtml").jump_tag("next")
+end, { desc = "Go to next tag" })
+vim.keymap.set("n", "[r", function()
+	require("tshtml").jump_tag("prev")
+end, { desc = "Go to previous tag" })

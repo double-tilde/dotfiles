@@ -22,8 +22,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
-# WSL Default
-export TERM=xterm-256color
+export TERM=kitty
 
 # Add nvm / npm / node to path
 export NVM_DIR="$XDG_DATA_HOME"/nvm

@@ -71,6 +71,10 @@ return {
 
 									["ac"] = { query = "@class.outer", desc = "Select outer part of a class" },
 									["ic"] = { query = "@class.inner", desc = "Select inner part of a class" },
+
+									-- TODO: Check if this functions properly
+									-- ["at"] = { query = "@tag.outer", desc = "Select outer part of a tag" },
+									-- ["it"] = { query = "@tag.inner", desc = "Select inner part of a tag" },
 								},
 							},
 							move = {
@@ -82,9 +86,9 @@ return {
 									["]c"] = { query = "@class.outer", desc = "Next class start" },
 									["]i"] = { query = "@conditional.outer", desc = "Next conditional start" },
 									["]l"] = { query = "@loop.outer", desc = "Next loop start" },
-									["]t"] = { query = "@tag.outer", desc = "Next tag start" },
 									["]s"] = { query = "@scope", query_group = "locals", desc = "Next scope" },
 									["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
+									["]t"] = { query = "@tag.inner", desc = "Next tag start" },
 								},
 								goto_next_end = {
 									["]F"] = { query = "@call.outer", desc = "Next function call end" },
@@ -100,7 +104,7 @@ return {
 									["[c"] = { query = "@class.outer", desc = "Prev class start" },
 									["[i"] = { query = "@conditional.outer", desc = "Prev conditional start" },
 									["[l"] = { query = "@loop.outer", desc = "Prev loop start" },
-									["[t"] = { query = "@tag.outer", desc = "Prev tag start" },
+									["[t"] = { query = "@tag.inner", desc = "Prev tag start" },
 								},
 								goto_previous_end = {
 									["[F"] = { query = "@call.outer", desc = "Prev function call end" },
