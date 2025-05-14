@@ -197,12 +197,12 @@ return {
 			tth.setup({
 				messages = false,
 			})
-			vim.keymap.set("n", "<leader>t", function()
+			vim.keymap.set("n", "<leader>j", function()
 				tth.jump_tag("next")
-			end, { desc = "Go to next html [T]ag" })
-			vim.keymap.set("n", "<leader>t", function()
+			end, { desc = "Go to next html tag" })
+			vim.keymap.set("n", "<leader>J", function()
 				tth.jump_tag("prev")
-			end, { desc = "Go to previous [T]ag" })
+			end, { desc = "Go to previous tag" })
 		end,
 	},
 }
