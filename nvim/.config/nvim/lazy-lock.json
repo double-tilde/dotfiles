@@ -22,6 +22,7 @@
   "Todo Comments": { "branch": "main", "commit": "304a8d204ee787d2544d8bc23cd38d2f929e7cc5" },
   "Treesitter": { "branch": "master", "commit": "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79" },
   "Treesitter Context": { "branch": "master", "commit": "5c48b8ba1b0b7b25feb6e34e7eb293ea893aedc4" },
+  "Treesitter Tag Hop": { "branch": "main", "commit": "0a0c8e563c4e6bee77ac9b8998d9e22e5cd18c70" },
   "Treesitter Text Objects": { "branch": "master", "commit": "b0debd5c424969b4baeabdc8f54db3036c691732" },
   "Trouble": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
   "Undo Tree": { "branch": "master", "commit": "b951b87b46c34356d44aa71886aecf9dd7f5788a" },

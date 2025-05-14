@@ -51,7 +51,7 @@ return {
 					end
 
 					-- Toggle LSP Inlay Hints
-					map("<leader>ti", toggleInlay, "[T]oggle [I]nlays")
+					map("<leader>i", toggleInlay, "Toggle [I]nlays")
 					-- Jump to the definition of the word under your cursor.
 					-- To jump back, press <C-t>.
 					map("<leader>gd", function()

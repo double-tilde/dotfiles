@@ -26,7 +26,7 @@ vim.keymap.set({ "n", "v" }, "C", '"_C', { desc = "Delete to void register" })
 vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Delete to void register" })
 
 -- Toggle relative and absolute line numbers
-vim.keymap.set("n", "<leader>tr", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle relative and absolte line numbers" })
+vim.keymap.set("n", "<leader>rl", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle [R]elative and absolte [L]ine numbers" })
 
 -- Select a line in visual block mode and use capital J or K to move that line and keep the cursor centered
 vim.keymap.set("v", "J", ":move '>+1<CR>gv-gvzz", { desc = "Move selected lines down and center the cursor" })
@@ -106,10 +106,3 @@ vim.keymap.set("n", "<leader>q", function()
 	end
 end, { desc = "Toggle quickfix list visibility" })
 
--- HTML tag navigation with TS HTML
-vim.keymap.set("n", "]r", function()
-	require("tshtml").jump_tag("next")
-end, { desc = "Go to next tag" })
-vim.keymap.set("n", "[r", function()
-	require("tshtml").jump_tag("prev")
-end, { desc = "Go to previous tag" })
