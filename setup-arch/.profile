@@ -27,7 +27,12 @@ export TERM=kitty
 # Add nvm / npm / node to path
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export NODE_REPL_HISTORY=$XDG_DATA_HOME/node_repl_history
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
+# Add python / jupyter to path
+export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
+export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 
 # Add cargo to path
 . "$HOME/.config/cargo/env"
