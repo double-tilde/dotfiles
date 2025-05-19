@@ -197,12 +197,12 @@ return {
 			tth.setup({
 				messages = false,
 			})
-			vim.keymap.set("n", "<leader>j", function()
-				tth.jump_tag("next")
-			end, { desc = "Go to next html tag" })
-			vim.keymap.set("n", "<leader>J", function()
-				tth.jump_tag("prev")
-			end, { desc = "Go to previous tag" })
+			vim.keymap.set({ "n", "v" }, "<leader>j", function()
+				require("treesitter-tag-hop").jump_tag("next")
+			end, { desc = "Jump to next tag" })
+			vim.keymap.set({ "n", "v" }, "<leader>J", function()
+				require("treesitter-tag-hop").jump_tag("prev")
+			end, { desc = "Jump to previous tag" })
 		end,
 	},
 }

@@ -41,6 +41,39 @@ return {
 		},
 	},
 	{
+		"nvimdev/dashboard-nvim",
+		name = "dashboard",
+		event = "VimEnter",
+		config = function()
+			require("dashboard").setup({
+				theme = "hyper",
+				config = {
+					week_header = {
+						enable = true,
+					},
+					shortcut = {
+						{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
+						{
+							icon = " ",
+							icon_hl = "@variable",
+							desc = "Files",
+							group = "Label",
+							action = "Telescope find_files",
+							key = "f",
+						},
+						{
+							desc = " dotfiles",
+							group = "Number",
+							action = "TelescopeSearchDotfiles",
+							key = "d",
+						},
+					},
+				},
+			})
+		end,
+		dependencies = { { "nvim-tree/nvim-web-devicons" } },
+	},
+	{
 		"lewis6991/gitsigns.nvim",
 		name = "Git Signs",
 		event = "VeryLazy",
@@ -109,11 +142,18 @@ return {
 		end,
 	},
 	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		name = "Render Markdown",
-		opts = {},
-		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-		---@module 'render-markdown'
+		"iamcco/markdown-preview.nvim",
+		name = "Makrdown Preview",
+		event = "VeryLazy",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && npm install",
+		ft = { "markdown" },
+		config = function()
+			vim.g.mkdp_auto_start = 1
+			vim.g.mkdp_auto_close = 1
+			vim.g.mkdp_browser = "firefox"
+			vim.g.mkdp_port = "8181"
+		end,
 	},
 	{
 		"arnamak/stay-centered.nvim",

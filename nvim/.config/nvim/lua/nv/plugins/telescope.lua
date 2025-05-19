@@ -68,6 +68,21 @@ return {
 			vim.keymap.set("n", "<leader>sn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end, { desc = "[S]earch [N]eovim files" })
+
+			-- Search my dotfiles
+			local function search_dotfiles()
+				builtin.live_grep({
+					prompt_title = "< Search Dotfiles >",
+					cwd = vim.fn.expand("~") .. "/dotfiles",
+					hidden = true,
+					follow = true,
+					additional_args = function()
+						return { "--hidden", "--no-ignore" }
+					end,
+				})
+			end
+			vim.api.nvim_create_user_command("TelescopeSearchDotfiles", search_dotfiles, {})
+			vim.keymap.set("n", "<leader>sc", search_dotfiles, { desc = "[S]earch [C]onfig files (dotfiles)" })
 		end,
 	},
 }
