@@ -1,4 +1,4 @@
-﻿;
+;
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
 ; ~~ AUTOHOTKEY CONFIG ~~
 ; ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
@@ -9,8 +9,12 @@ Terminal := "wezterm-gui.exe"
 TerminalTitle := "~"
 Browser := "firefox.exe"
 BrowserTitle := "Mozilla Firefox"
-Notes := "Obsidian.exe" ; Full path added to Environment Variables
-NotesTitle := "Obsdian"
+FTP := "C:\Program Files (x86)\WinSCP\WinSCP.exe"
+FTPTitle := "WinSCP"
+Chat := "C:\Program Files\Slack\Slack.exe"
+ChatTitle := "Slack"
+Notes := "ApplicationFrameHost.exe"
+NotesTitle := "Sticky Notes"
 NotesAlt := "notepad.exe"
 NotesAltTitle := "Notepad"
 Explorer := "explorer"
@@ -44,6 +48,8 @@ Esc::Capslock
 
 #1::CheckOrRunMax(Terminal, TerminalTitle)
 #2::CheckOrRunMax(Browser, BrowserTitle)
+#3::CheckOrRun(FTP, FTPTitle)
+#4::CheckOrRun(Chat, ChatTitle)
 
 #8::CheckOrRunMax(Notes, NotesTitle)
 #9::CheckOrRun(NotesAlt, NotesAltTitle)
