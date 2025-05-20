@@ -12,7 +12,7 @@ zsh/.config/zsh/.zcompdump*
 ENV
 
 # Configuration files
-*.config
+# *.config
 config.ini
 config.yml
 

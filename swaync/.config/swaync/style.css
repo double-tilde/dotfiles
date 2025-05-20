@@ -1,0 +1,21 @@
+* {
+	all: unset;
+	font-family: "Karla", sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	color: #c9c7cd;
+}
+
+#notification-center {
+	background-color: #161617;
+	border-radius: 0px;
+	padding: 10px;
+}
+
+.notification {
+	background-color: #161617;
+	border: 1px solid #92a2d5;
+	margin: 10px;
+	border-radius: 0px;
+	padding: 10px;
+}
