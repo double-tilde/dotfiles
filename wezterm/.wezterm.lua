@@ -12,17 +12,13 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- Open WSL by default - At work I use a different distro
-local hostname = wezterm.hostname()
-if hostname == "double-tilde" then
-	config.default_domain = "WSL:Ubuntu"
-else
-	config.default_domain = "WSL:Ubuntu-20.04"
-end
+-- Open WSL by default
+config.default_domain = "WSL:Ubuntu-20.04"
 
 -- Color Settings
 config.term = "xterm-256color"
 
+-- Old World Colors
 config.colors = {
 	cursor_bg = "#C9C7CD",
 	cursor_border = "#C9C7CD",
@@ -34,6 +30,7 @@ config.colors = {
 	selection_bg = "#B7AED5",
 	selection_fg = "#C9C7CD",
 
+	-- Tab bar allows tmux like tabs
 	tab_bar = {
 		background = "#161617",
 		inactive_tab = {
@@ -91,7 +88,7 @@ config.font_size = 13.0
 
 -- Window Settings
 config.window_decorations = "NONE | RESIZE"
-config.window_background_image = "./wezterm.jpg"
+-- config.window_background_image = "./wezterm.jpg"
 config.window_background_opacity = 1.0
 config.window_padding = {
 	left = 8,
@@ -100,7 +97,7 @@ config.window_padding = {
 	bottom = 8,
 }
 
--- Multiplex Settings
+-- Multiplex Settings - Same main bindings as tmux
 config.leader = { mods = "CTRL", key = "Space" }
 config.keys = {
 	{
@@ -165,6 +162,7 @@ config.keys = {
 	},
 }
 
+-- Open a tab with LEADER + [1+9]
 for i = 0, 8 do
 	table.insert(config.keys, {
 		key = tostring(i + 1),

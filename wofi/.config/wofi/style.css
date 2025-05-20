@@ -1,3 +1,9 @@
+/*
+~~ ~~ ~~ ~~ ~~ ~~
+~~ WOFI CONFIG ~~
+~~ ~~ ~~ ~~ ~~ ~~
+*/
+
 window {
 	margin: 0;
 	padding: 0;
@@ -53,4 +59,3 @@ window {
 #entry:selected #text {
 	color: #90b99f;
 }
-

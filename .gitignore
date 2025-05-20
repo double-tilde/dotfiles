@@ -1,4 +1,52 @@
+# TMUX TPM plugins
 tmux/.config/tmux/plugins/
+
+# Extra ZSH files and plugins
 zsh/.config/zsh/.oh-my-zsh/
 zsh/.config/zsh/.zsh_history
 zsh/.config/zsh/.zcompdump*
+
+# Environment files
+.env
+.env.local
+ENV
+
+# Configuration files
+*.config
+config.ini
+config.yml
+
+# Key and certificate files
+*.pem
+*.key
+*.crt
+
+# Database files
+*.sqlite
+*.db
+
+# Log files
+*.log
+
+# IDE and editor files
+.vscode/settings.json
+.idea/workspace.xml
+
+# Build and dependency directories
+node_modules/
+venv/
+bin/
+obj/
+
+# Local development files
+*.local
+*.swp
+*.swo
+
+# Secrets and credentials
+secrets.yml
+credentials.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
