@@ -1,52 +1,64 @@
 # TMUX TPM plugins
-tmux/.config/tmux/plugins/
+**/tmux/.config/tmux/plugins/
+**/.tmux/plugins/
 
 # Extra ZSH files and plugins
-zsh/.config/zsh/.oh-my-zsh/
-zsh/.config/zsh/.zsh_history
-zsh/.config/zsh/.zcompdump*
+**/.oh-my-zsh/
+**/.zsh_history
+**/.zcompdump*
 
 # Environment files
-.env
-.env.local
-ENV
+**/.env
+**/.env.local
+**/ENV
 
 # Configuration files
-# *.config
-config.ini
-config.yml
+# **/*.config*
+# **/*_config*
+# **/*-config*
+# **/config.ini
+# **/config.yml
 
 # Key and certificate files
-*.pem
-*.key
-*.crt
+**/*.pem
+**/*.key
+**/*.crt
 
 # Database files
-*.sqlite
-*.db
+**/*.sqlite
+**/*.db
 
-# Log files
-*.log
+# Log and History files
+**/log/
+**/*.log/
+**/*.log*
+**/*_log*
+**/*-log*
+**/history/
+**/*.history/
+**/*.history*
+**/*_history*
+**/*-history*
 
 # IDE and editor files
-.vscode/settings.json
-.idea/workspace.xml
+**/.vscode/settings.json
+**/.idea/workspace.xml
 
 # Build and dependency directories
-node_modules/
-venv/
-bin/
-obj/
+**/node_modules/
+**/venv/
+**/bin/
+**/obj/
 
 # Local development files
-*.local
-*.swp
-*.swo
+**/*.local
+**/*.swp
+**/*.swo
 
 # Secrets and credentials
-secrets.yml
-credentials.json
+**/secrets.yml
+**/credentials.json
 
 # Operating system files
-.DS_Store
-Thumbs.db
+**/.DS_Store
+**/Thumbs.db
