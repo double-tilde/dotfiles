@@ -13,6 +13,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_PICTURES_DIR="$HOME/docs/images"
 
 # Defaults
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
@@ -23,6 +24,9 @@ export SUDO_EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 export TERM=kitty
+
+# Hyprshot
+export HYPRSHOT_DIR=$HOME/docs/images/screenshots
 
 # Add nvm / npm / node to path
 export NVM_DIR="$XDG_DATA_HOME"/nvm

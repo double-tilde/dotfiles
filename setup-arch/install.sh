@@ -37,7 +37,8 @@ fi
 # Install hyprland
 if ! command -v hyprland &>/dev/null; then
 	yay -S --noconfirm wayland hyprland xdg-desktop-portal xdg-desktop-portal-wlr waybar \
-	hyprpaper grim slurp wl-clipboard wofi swaync swaylock-effects swayidle || { echo "failed to install hyprland"; return 1; }
+	grim slurp jq hyprpicker hyprshot hyprpaper wl-clipboard wofi swaync swaylock-effects swayidle \
+	|| { echo "failed to install hyprland"; return 1; }
 fi
 
 # Install fonts
@@ -73,7 +74,7 @@ fi
 
 # Install extras
 if ! command -v firefox &>/dev/null; then
-	yay -S --noconfirm firefox thunar obs-studio obsidian vlc mpv gimp openvpn \
+	yay -S --noconfirm firefox thunar obs-studio obsidian vlc imv mpv gimp openvpn \
 	htop fastfetch brightnessctl || { echo "failed to install extra tools"; return 1; }
 fi
 
