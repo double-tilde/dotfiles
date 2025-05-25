@@ -8,7 +8,7 @@ networkmanager stow || { echo "failed to install essentials"; return 1; }
 # Stow dotfiles
 [[ -d ~/dotfiles ]] || { echo "dotfiles directory not found"; return 1; }
 cd ~/dotfiles
-for dir in alacritty bash dunst fastfetch kitty nvim tmux waybar wofi zsh setup-arch; do
+for dir in alacritty bash dunst fastfetch kitty nvim swaync tmux waybar wofi zsh setup-arch; do
 	stow "$dir"
 done
 cd ~
