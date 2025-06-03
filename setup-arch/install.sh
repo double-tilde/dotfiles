@@ -35,7 +35,7 @@ sudo mv ~/.cargo ~/.config/cargo && sudo mv ~/.rustup ~/.config/rustup
 # if ! command -v go &>/dev/null; then
 # 	yay -S --noconfirm go python python-pip || { echo "failed to install go any python"; return 1; }
 # fi
-yay -S --noconfirm go python python-pip || { echo "failed to install go any python"; return 1; }
+yay -S --noconfirm go hugo python python-pip || { echo "failed to install go any python"; return 1; }
 
 # Install hyprland
 # if ! command -v hyprland &>/dev/null; then
