@@ -180,6 +180,10 @@ return {
 		name = "Vim Be Good",
 	},
 	{
+		"phelipetls/vim-hugo",
+		name = "Vim Hugo",
+	},
+	{
 		-- Detect tabstop and shiftwidth automatically
 		"tpope/vim-sleuth",
 		name = "Sleuth",

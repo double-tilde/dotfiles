@@ -23,7 +23,9 @@ return {
 		-- local disable_filetypes = { c = true, cpp = true }
 		formatters_by_ft = {
 			-- Conform can run multiple formatters sequentially
-			-- html = { "" },
+			html = { "prettier" },
+			htmlhugo = { "prettier" },
+			markdown = { "prettier" },
 			go = { "goimports", "gofumpt", "golines" },
 			lua = { "stylua" },
 			-- nix = { "nixfmt" },
