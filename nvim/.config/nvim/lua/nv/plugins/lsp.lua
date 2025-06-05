@@ -200,7 +200,6 @@ return {
 				"php-cs-fixer",
 				"prettier",
 				"pyright",
-				-- "ruff",
 				"stylua",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

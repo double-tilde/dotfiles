@@ -34,7 +34,9 @@ return {
 		-- See :help cmp
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-		luasnip.config.setup({})
+		luasnip.config.setup({
+			luasnip.filetype_extend("htmlhugo", { "html" }),
+		})
 
 		cmp.setup({
 			snippet = {
