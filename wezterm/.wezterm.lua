@@ -84,7 +84,7 @@ config.cursor_blink_rate = 500
 -- Font Settings
 config.font = wezterm.font("GeistMono Nerd Font")
 config.prefer_egl = true
-config.font_size = 13.0
+config.font_size = 16.0
 
 -- Window Settings
 config.window_decorations = "NONE | RESIZE"
