@@ -179,6 +179,11 @@ return {
 						},
 					},
 				},
+				phpactor = {
+					filetypes = { "php" },
+					cmd = { "phpactor", "language-server" },
+					root_dir = util.root_pattern("composer.json", ".git"),
+				},
 			}
 
 			-- Ensure the servers and tools are installed
@@ -197,6 +202,7 @@ return {
 				"gopls",
 				"html",
 				"isort",
+				"phpactor",
 				"php-cs-fixer",
 				"prettier",
 				"pyright",
