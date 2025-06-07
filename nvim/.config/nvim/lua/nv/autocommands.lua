@@ -11,9 +11,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- Set .webc  and .php files to be treated as html files
+-- Set .webc files to be treated as html files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	pattern = { "*.webc", "*.php" },
+	pattern = { "*.webc" },
 	callback = function()
 		vim.bo.filetype = "html"
 	end,
@@ -22,13 +22,13 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 -- Show the commandline when I am recording a macro, then hide it again when I am not
 -- This setting is needed as in my base.lua file I have hidden the command line by
 -- default for aesthetic reasons
-vim.api.nvim_create_autocmd("RecordingEnter", {
-	callback = function()
-		vim.opt.cmdheight = 1
-	end,
-})
-vim.api.nvim_create_autocmd("RecordingLeave", {
-	callback = function()
-		vim.opt.cmdheight = 0
-	end,
-})
+-- vim.api.nvim_create_autocmd("RecordingEnter", {
+-- 	callback = function()
+-- 		vim.opt.cmdheight = 1
+-- 	end,
+-- })
+-- vim.api.nvim_create_autocmd("RecordingLeave", {
+-- 	callback = function()
+-- 		vim.opt.cmdheight = 0
+-- 	end,
+-- })
