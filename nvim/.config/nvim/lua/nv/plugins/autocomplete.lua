@@ -36,6 +36,7 @@ return {
 		local luasnip = require("luasnip")
 		luasnip.config.setup({
 			luasnip.filetype_extend("htmlhugo", { "html" }),
+			luasnip.filetype_extend("php", { "html" }),
 		})
 
 		cmp.setup({
@@ -51,12 +52,6 @@ return {
 					cmp.config.compare.score,
 					cmp.config.compare.offset,
 					cmp.config.compare.order,
-					-- compare.score_offset,
-					-- compare.scopes,
-					-- compare.sort_text,
-					-- compare.exact,
-					-- compare.kind,
-					-- compare.length,
 				},
 			},
 
