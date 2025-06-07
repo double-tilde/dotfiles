@@ -32,6 +32,7 @@ vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
+
 -- Don't show command line below the statusline, entering command mode will
 -- overlay statusline instead
 vim.opt.cmdheight = 0
