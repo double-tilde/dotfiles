@@ -33,7 +33,19 @@ return {
 			-- You can use a sub-list to tell conform to run *until* a formatter is found.
 			javascript = { "prettier" },
 			json = { "prettier" },
-			php = { "php-cs-fixer" },
+			php = { "php_cs_fixer" },
+		},
+		formatters = {
+			php_cs_fixer = {
+				command = "php-cs-fixer",
+				args = {
+					"fix",
+					"$FILENAME",
+					"--using-cache=no",
+					"--config", os.getenv("HOME") .. "/.php-cs-fixer.php",
+				},
+				stdin = false,
+		    },
 		},
 	},
 }
