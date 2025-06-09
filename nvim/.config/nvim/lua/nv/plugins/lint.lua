@@ -9,6 +9,7 @@ return {
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
 			go = { "golangcilint" },
+			php = { "php" },
 			-- python = { "ruff" },
 		}
 
