@@ -12,6 +12,7 @@
   "Lualine": { "branch": "master", "commit": "15884cee63a8c205334ab13ab1c891cd4d27101a" },
   "Makrdown Preview": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "Mini Addons": { "branch": "main", "commit": "18889a4993a2c6de64eb07f91e7ad8666793441a" },
+  "Modes": { "branch": "main", "commit": "fc7bc0141500d9cf7c14f46fca846f728545a781" },
   "Neovim LSP Config": { "branch": "master", "commit": "ac1dfbe3b60e5e23a2cff90e3bd6a3bc88031a57" },
   "Nvim Lint": { "branch": "master", "commit": "fdb04e9285edefbe25a02a31a35e8fbb10fe054d" },
   "Oil File Navigation": { "branch": "master", "commit": "685cdb4ffa74473d75a1b97451f8654ceeab0f4a" },
