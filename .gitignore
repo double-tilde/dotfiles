@@ -51,7 +51,7 @@
 **/obj/
 
 # Local development files
-**/*.local
+# **/*.local
 **/*.swp
 **/*.swo
 

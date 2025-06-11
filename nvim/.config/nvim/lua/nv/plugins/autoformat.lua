@@ -42,7 +42,7 @@ return {
 					"fix",
 					"$FILENAME",
 					"--using-cache=no",
-					"--config", os.getenv("HOME") .. "/.php-cs-fixer.php",
+					"--config", os.getenv("HOME") .. "/.config/php/.php-cs-fixer.php",
 				},
 				stdin = false,
 		    },
