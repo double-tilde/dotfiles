@@ -37,15 +37,15 @@ tooltip {
 	all: initial;
 	min-width: 0;
 	padding: 2px 8px;
-	color: #92a2d5;
+	color: #c9c7cd;
 	border-bottom: 2px solid transparent;
 }
 
 #workspaces button.active,
 #workspaces button:active,
 #workspaces button:hover {
-	color: #c9c7cd;
-	border-bottom: 2px solid #c9c7cd;
+	color: #92a2d5;
+	border-bottom: 2px solid #92a2d5;
 }
 
 #workspaces button.urgent {
