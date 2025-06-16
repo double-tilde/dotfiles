@@ -8,8 +8,8 @@
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 
 # History
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=1000
+SAVEHIST=1000
 HISTFILE="$HOME/.config/zsh/.zsh_history"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -85,7 +85,6 @@ fzf-open-nvim() {
     .git
     node_modules
     .cache
-    .cacheiii
     .nvm
     .npm
     .mozilla
