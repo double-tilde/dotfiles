@@ -102,7 +102,12 @@ config.leader = { mods = "CTRL", key = "Space" }
 config.keys = {
 	{
 		mods = "LEADER",
-		key = "n",
+		key = "w",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
+	{
+		mods = "LEADER",
+		key = "c",
 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 	},
 	{
@@ -112,12 +117,12 @@ config.keys = {
 	},
 	{
 		mods = "LEADER",
-		key = "|",
+		key = "%",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
 		mods = "LEADER",
-		key = "-",
+		key = "\"",
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 	{
