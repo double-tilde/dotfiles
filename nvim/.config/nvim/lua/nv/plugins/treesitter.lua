@@ -197,7 +197,8 @@ return {
 		config = function()
 			local tth = require("treesitter-tag-hop")
 			tth.setup({
-				messages = false,
+				show_messages = false,
+				filetypes = { "html", "php" },
 			})
 			vim.keymap.set({ "n", "v" }, "<leader>j", function()
 				require("treesitter-tag-hop").jump_tag("next")

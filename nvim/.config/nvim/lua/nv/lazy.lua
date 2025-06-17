@@ -16,6 +16,7 @@ require("lazy").setup({
 	require("nv.plugins.autocomplete"),
 	require("nv.plugins.autoformat"),
 	require("nv.plugins.comments"),
+	require("nv.plugins.dashboard"),
 	-- require("nv.plugins.debug"),
 	require("nv.plugins.flash"),
 	require("nv.plugins.harpoon"),
