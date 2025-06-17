@@ -8,7 +8,7 @@ return {
 	config = function()
 		local tth = require("treesitter-tag-hop")
 		tth.setup({
-			messages = false,
+			show_messages = false,
 		})
 		vim.keymap.set("n", "<leader>t", function()
 			tth.jump_tag("next")
