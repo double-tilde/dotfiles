@@ -13,7 +13,7 @@ if wezterm.config_builder then
 end
 
 -- Open WSL by default
-config.default_domain = "WSL:Ubuntu-20.04"
+config.default_domain = "WSL:Ubuntu-24.04"
 
 -- Color Settings
 config.term = "xterm-256color"
