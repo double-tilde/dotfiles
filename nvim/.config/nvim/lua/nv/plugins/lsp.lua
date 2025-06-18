@@ -197,9 +197,11 @@ return {
 				"gopls",
 				"html",
 				"isort",
+				"jsonlint",
 				"php-cs-fixer",
 				"prettier",
 				"pyright",
+				"typescript-language-server",
 				"stylua",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

@@ -8,6 +8,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Set PATH so it includes mason tools
+if [ -d "$HOME/.local/share/nvim/mason/bin" ] ; then
+    PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+fi
+
 # Variables
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"

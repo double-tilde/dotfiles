@@ -34,7 +34,7 @@ return {
 		require("notify").setup({
 			stages = "static",
 			render = "minimal",
-			timeout = 1500,
+			timeout = 5000,
 			background_colour = "#161617",
 		})
 	end,
