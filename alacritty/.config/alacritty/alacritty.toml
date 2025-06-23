@@ -17,7 +17,7 @@ program = "/usr/bin/zsh"
 [font]
 normal.family = "GeistMono Nerd Font"
 normal.style = "regular"
-size = 20
+size = 19
 
 [window.padding]
 x = 10

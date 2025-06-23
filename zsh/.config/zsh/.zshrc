@@ -13,9 +13,9 @@ SAVEHIST=1000
 HISTFILE="$HOME/.config/zsh/.zsh_history"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="afowler"
+# ZSH_THEME="afowler"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
