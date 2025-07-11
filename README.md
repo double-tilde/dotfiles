@@ -60,8 +60,6 @@ Below are some notes on what I like to install on new systems
 - inkspace & gimp (photo editing)
 - bitwig (audio)
 
-![](images/landing.png)
-
 ```
 background: #161617
 foreground: #c9c7cd
