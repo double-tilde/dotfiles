@@ -8,8 +8,6 @@
 
 My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) colorscheme for Neovim
 
-TODO: Finish setting up glazewm on windows
-
 ## Colors & Theming
 
 - San-serif font: Karla
@@ -50,9 +48,8 @@ Below are some notes on what I like to install on new systems
 
 - polybar
 - betterlockscreen
-- autotiling (autotiling for i3)
-- dunst (notifications)
-- maim (screenshots)
+- swaync (notifications)
+- hyprshot (screenshots)
 - pavucontrol (audio settings)
 - thunar (file manager)
 - nwg-look (theme settings)
@@ -63,7 +60,7 @@ Below are some notes on what I like to install on new systems
 - inkspace & gimp (photo editing)
 - bitwig (audio)
 
-![](images/landing.jpg)
+![](images/landing.png)
 
 ```
 background: #161617
