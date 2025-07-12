@@ -87,7 +87,7 @@ return {
 					-- https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
 				}),
 				sources = {
-					{ name = "supermaven", priority = 5 },
+					-- { name = "supermaven", priority = 5 },
 					{ name = "luasnip", priority = 4 },
 					{ name = "nvim_lsp", priority = 3 },
 					{ name = "path", priority = 2 },
@@ -96,12 +96,12 @@ return {
 			})
 		end,
 	},
-	{
-		"supermaven-inc/supermaven-nvim",
-		name = "Super Maven",
-		event = "VeryLazy",
-		config = function()
-			require("supermaven-nvim").setup({})
-		end,
-	},
+	-- {
+	-- 	"supermaven-inc/supermaven-nvim",
+	-- 	name = "Super Maven",
+	-- 	event = "VeryLazy",
+	-- 	config = function()
+	-- 		require("supermaven-nvim").setup({})
+	-- 	end,
+	-- },
 }
