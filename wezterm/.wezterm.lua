@@ -13,6 +13,14 @@ if wezterm.config_builder then
 end
 
 -- Open WSL by default
+config.wsl_domains = {
+	{
+		name = "WSL:Ubuntu-24.04",
+		distribution = "Ubuntu-24.04",
+		default_cwd = "~",
+		default_prog = { "zsh", "-c", "tmux" },
+	},
+}
 config.default_domain = "WSL:Ubuntu-24.04"
 
 -- Color Settings
@@ -98,87 +106,88 @@ config.window_padding = {
 }
 
 -- Multiplex Settings - Same main bindings as tmux
-config.leader = { mods = "CTRL", key = "Space" }
-config.keys = {
-	{
-		mods = "LEADER",
-		key = "w",
-		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
-	},
-	{
-		mods = "LEADER",
-		key = "c",
-		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
-	},
-	{
-		mods = "LEADER",
-		key = "x",
-		action = wezterm.action.CloseCurrentPane({ confirm = true }),
-	},
-	{
-		mods = "LEADER",
-		key = "%",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		mods = "LEADER",
-		key = "\"",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		mods = "LEADER",
-		key = "h",
-		action = wezterm.action.ActivatePaneDirection("Left"),
-	},
-	{
-		mods = "LEADER",
-		key = "j",
-		action = wezterm.action.ActivatePaneDirection("Down"),
-	},
-	{
-		mods = "LEADER",
-		key = "k",
-		action = wezterm.action.ActivatePaneDirection("Up"),
-	},
-	{
-		mods = "LEADER",
-		key = "l",
-		action = wezterm.action.ActivatePaneDirection("Right"),
-	},
-	{
-		mods = "LEADER",
-		key = "LeftArrow",
-		action = wezterm.action.AdjustPaneSize({ "Left", 5 }),
-	},
-	{
-		mods = "LEADER",
-		key = "RightArrow",
-		action = wezterm.action.AdjustPaneSize({ "Right", 5 }),
-	},
-	{
-		mods = "LEADER",
-		key = "DownArrow",
-		action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
-	},
-	{
-		mods = "LEADER",
-		key = "UpArrow",
-		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
-	},
-}
+-- config.leader = { mods = "CTRL", key = "Space" }
+-- config.keys = {
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "w",
+-- 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "c",
+-- 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "x",
+-- 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "%",
+-- 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "\"",
+-- 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "h",
+-- 		action = wezterm.action.ActivatePaneDirection("Left"),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "j",
+-- 		action = wezterm.action.ActivatePaneDirection("Down"),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "k",
+-- 		action = wezterm.action.ActivatePaneDirection("Up"),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "l",
+-- 		action = wezterm.action.ActivatePaneDirection("Right"),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "LeftArrow",
+-- 		action = wezterm.action.AdjustPaneSize({ "Left", 5 }),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "RightArrow",
+-- 		action = wezterm.action.AdjustPaneSize({ "Right", 5 }),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "DownArrow",
+-- 		action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "UpArrow",
+-- 		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
+-- 	},
+-- }
 
 -- Open a tab with LEADER + [1+9]
-for i = 0, 8 do
-	table.insert(config.keys, {
-		key = tostring(i + 1),
-		mods = "LEADER",
-		action = wezterm.action.ActivateTab(i),
-	})
-end
+-- for i = 0, 8 do
+-- 	table.insert(config.keys, {
+-- 		key = tostring(i + 1),
+-- 		mods = "LEADER",
+-- 		action = wezterm.action.ActivateTab(i),
+-- 	})
+-- end
 
 -- Tabs Settings
-config.hide_tab_bar_if_only_one_tab = false
-config.use_fancy_tab_bar = false
-config.tab_and_split_indices_are_zero_based = false
+-- config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
+-- config.use_fancy_tab_bar = false
+-- config.tab_and_split_indices_are_zero_based = false
 
 return config
