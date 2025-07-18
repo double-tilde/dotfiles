@@ -22,7 +22,7 @@ My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) co
     - [Birmingham Museum Trust](https://unsplash.com/@birminghammuseumstrust)
     - [Europeana](https://unsplash.com/@birminghammuseumstrust)
 
-![](images/example.png)
+![](images/look.png)
 
 Below are some notes on what I like to install on new systems
 
