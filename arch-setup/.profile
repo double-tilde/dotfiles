@@ -8,6 +8,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/scripts" ] ; then
+    PATH="$HOME/.local/scripts:$PATH"
+fi
+
 # Set PATH so it includes mason tools
 if [ -d "$HOME/.local/share/nvim/mason/bin" ] ; then
     PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
@@ -28,7 +33,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
-export TERM=kitty
+export TERM="xterm-256color"
 
 # Hyprshot
 export HYPRSHOT_DIR=$HOME/docs/images/screenshots
