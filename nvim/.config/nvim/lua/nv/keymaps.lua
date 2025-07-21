@@ -24,6 +24,7 @@ vim.keymap.set({ "n", "v" }, "x", '"_x', { desc = "Delete to void register" })
 vim.keymap.set({ "n", "v" }, "c", '"_c', { desc = "Delete to void register" })
 vim.keymap.set({ "n", "v" }, "C", '"_C', { desc = "Delete to void register" })
 vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Delete to void register" })
+vim.keymap.set({ "v" }, "p", '"_dP', { desc = "Paste without overwriting register" })
 
 -- Toggle relative and absolute line numbers
 vim.keymap.set("n", "<leader>rl", "<cmd>set rnu! rnu?<CR>", { desc = "Toggle [R]elative and absolte [L]ine numbers" })
@@ -105,4 +106,3 @@ vim.keymap.set("n", "<leader>q", function()
 		vim.cmd("copen")
 	end
 end, { desc = "Toggle quickfix list visibility" })
-
