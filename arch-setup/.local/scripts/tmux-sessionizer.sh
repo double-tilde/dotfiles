@@ -5,7 +5,7 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height=30% --ansi --border bottom --
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/docs ~/projects/ ~/dotfiles ~/dotfiles/*/.config ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/docs ~/projects/ ~/projects/learn/ ~/dotfiles ~/dotfiles/*/.config ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 [[ -z $selected ]] && exit 0
