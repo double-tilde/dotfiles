@@ -62,7 +62,7 @@ yay -S --noconfirm pipewire pipewire-pulse wireplumber pavucontrol \
 ||  { echo "failed to install audio tools"; return 1; }
 
 # Install extras
-yay -S --noconfirm firefox thunar obs-studio obsidian vlc imv mpv gimp openvpn \
+yay -S --noconfirm firefox mullvad-vpn thunar obs-studio obsidian vlc imv mpv gimp \
 htop fastfetch brightnessctl || { echo "failed to install extra tools"; return 1; }
 
 # Enable system services
