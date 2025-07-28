@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-query=$(wofi --dmenu -p "Search:")
+query=$(wofi --show dmenu -p "Search:")
 
 # If query is not empty
 if [ -n "$query" ]; then

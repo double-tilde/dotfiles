@@ -2,6 +2,7 @@ return {
 	{
 		"laytan/cloak.nvim",
 		name = "Cloak",
+		event = "VeryLazy",
 		opts = {
 			patterns = {
 				{
@@ -63,29 +64,12 @@ return {
 			},
 		},
 	},
-	-- {
-	-- 	"m4xshen/hardtime.nvim",
-	-- 	dependencies = { "MunifTanjim/nui.nvim" },
-	-- 	opts = {
-	-- 		max_count = 5,
-	-- 		disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason", "oil" },
-	-- 		hint = false,
-	-- 		notification = false,
-	-- 		disable_mouse = false,
-	-- 		disabled_keys = {
-	-- 			["<Up>"] = {},
-	-- 			["<Down>"] = {},
-	-- 			["<Left>"] = {},
-	-- 			["<Right>"] = {},
-	-- 		},
-	-- 	},
-	-- },
 	{
 		-- Highlight RGB colors
 		"brenoprata10/nvim-highlight-colors",
 		name = "Highlight Colors",
-		opts = {},
 		event = "VeryLazy",
+		opts = {},
 		config = function()
 			require("nvim-highlight-colors").setup({})
 		end,
@@ -93,6 +77,7 @@ return {
 	{
 		"echasnovski/mini.nvim",
 		name = "Mini Addons",
+		lazy = false,
 		opts = {},
 		config = function()
 			-- Better Around/Inside textobjects
@@ -143,12 +128,13 @@ return {
 		-- Vim Be Good Game
 		-- Run the following command :VimBeGood
 		"ThePrimeagen/vim-be-good",
-		event = "VeryLazy",
 		name = "Vim Be Good",
+		event = "VeryLazy",
 	},
 	{
 		"phelipetls/vim-hugo",
 		name = "Vim Hugo",
+		event = "VeryLazy",
 	},
 	{
 		-- Detect tabstop and shiftwidth automatically

@@ -7,18 +7,18 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			{
-				-- Useful status updates for LSP.
-				"j-hui/fidget.nvim",
-				name = "Fidget",
-				opts = {
-					notification = {
-						window = {
-							winblend = 0,
-						},
-					},
-				},
-			},
+			-- {
+			-- 	-- Useful status updates for LSP.
+			-- 	"j-hui/fidget.nvim",
+			-- 	name = "Fidget",
+			-- 	opts = {
+			-- 		notification = {
+			-- 			window = {
+			-- 				winblend = 0,
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
 		},
 		config = function()
 			local util = require("lspconfig/util")
@@ -51,39 +51,7 @@ return {
 					end
 
 					-- Toggle LSP Inlay Hints
-					map("<leader>i", toggleInlay, "Toggle [I]nlays")
-					-- Jump to the definition of the word under your cursor.
-					-- To jump back, press <C-t>.
-					map("<leader>gd", function()
-						require("telescope.builtin").lsp_definitions()
-						vim.cmd("normal! zz")
-					end, "[G]oto [D]efinition")
-					-- Find references for the word under your cursor.
-					map("<leader>gr", function()
-						require("telescope.builtin").lsp_references()
-						vim.cmd("normal! zz")
-					end, "[G]oto [R]eferences")
-					-- Jump to the implementation of the word under your cursor.
-					map("<leader>gI", function()
-						require("telescope.builtin").lsp_implementations()
-						vim.cmd("normal! zz")
-					end, "[G]oto [I]mplementation")
-					-- Jump to the type of the word under your cursor.
-					-- Useful when you're not sure what type a variable is and you want to see
-					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-					-- Fuzzy find all the symbols in your current document.
-					-- Symbols are things like variables, functions, types, etc.
-					map("<leader>ds", function()
-						require("telescope.builtin").lsp_document_symbols()
-						vim.cmd("normal! zz")
-					end, "[D]ocument [S]ymbols")
-					-- Fuzzy find all the symbols in your current workspace.
-					-- Similar to document symbols, except searches over your entire project.
-					map(
-						"<leader>ws",
-						require("telescope.builtin").lsp_dynamic_workspace_symbols,
-						"[W]orkspace [S]ymbols"
-					)
+					map("<leader>ii", toggleInlay, "Toggle [I]nlays")
 					-- Rename the variable under your cursor.
 					-- Most Language Servers support renaming across files, etc.
 					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")

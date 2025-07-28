@@ -16,7 +16,6 @@ require("lazy").setup({
 	require("nv.plugins.autocomplete"),
 	require("nv.plugins.autoformat"),
 	require("nv.plugins.comments"),
-	require("nv.plugins.dashboard"),
 	-- require("nv.plugins.debug"),
 	require("nv.plugins.flash"),
 	require("nv.plugins.harpoon"),
@@ -25,9 +24,8 @@ require("lazy").setup({
 	require("nv.plugins.lualine"),
 	-- modules is smaller plugins like mini, css colors, git signs, etc
 	require("nv.plugins.modules"),
-	require("nv.plugins.noice"),
 	require("nv.plugins.oil"),
-	require("nv.plugins.telescope"),
+	require("nv.plugins.snacks"),
 	require("nv.plugins.theme"),
 	require("nv.plugins.treesitter"),
 	require("nv.plugins.trouble"),
