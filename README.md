@@ -17,10 +17,10 @@ My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) co
 - WSL2 folder includes these colors for the windows terminal
 - The directory structure works with GNU Stow so I can use the configs across multiple platforms
 - Most of my background images and tabliss images come from unsplash, particularly:
-    - [Tabliss wallpaper collection](https://unsplash.com/collections/74420642/victorian)
-    - [British Library](https://unsplash.com/@britishlibrary)
-    - [Birmingham Museum Trust](https://unsplash.com/@birminghammuseumstrust)
-    - [Europeana](https://unsplash.com/@birminghammuseumstrust)
+  - [Tabliss wallpaper collection](https://unsplash.com/collections/74420642/victorian)
+  - [British Library](https://unsplash.com/@britishlibrary)
+  - [Birmingham Museum Trust](https://unsplash.com/@birminghammuseumstrust)
+  - [Europeana](https://unsplash.com/@birminghammuseumstrust)
 
 ![](images/look.png)
 
@@ -30,9 +30,9 @@ Below are some notes on what I like to install on new systems
 
 **Terminals**
 
-- wezterm
-- kitty
-- alacritty
+- wezterm (wsl2)
+- kitty (arch)
+- alacritty (optional)
 
 **Terminal / Development Tools**
 
