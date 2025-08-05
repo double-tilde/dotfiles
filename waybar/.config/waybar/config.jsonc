@@ -95,7 +95,7 @@
     "custom/power": {
         "format": "⏻",
         "exec": "echo ⏻", 
-        "on-click": "~/.config/waybar/powermenu.sh",
+        "on-click": "powermenu.sh",
         "tooltip": false
     }
 }

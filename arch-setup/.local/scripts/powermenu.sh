@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf "  Lock\n󰍃  Logout\n󰜉  Reboot\n  Shutdown" | wofi --show dmenu -p "Power Menu")
+choice=$(printf "  Lock\n󰍃  Logout\n󰜉  Reboot\n  Shutdown" | rofi -dmenu -p "Power Menu")
 
 case "$choice" in
   "  Lock") swaylock --image ~/.local/wallpapers/landing.jpg --effect-blur 7x5 --clock --indicator \
