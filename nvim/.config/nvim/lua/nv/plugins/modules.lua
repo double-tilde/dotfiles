@@ -6,16 +6,12 @@ return {
 		opts = {
 			patterns = {
 				{
-					file_pattern = ".env*",
+					file_pattern = { ".env", "*.env", "ENV" },
 					cloak_pattern = { "=.+", ":.+", "-.+" },
 				},
 				{
-					file_pattern = "ENV",
-					cloak_pattern = { "=.+", ":.+", "-.+" },
-				},
-				{
-					file_pattern = "*.env",
-					cloak_pattern = { "=.+", ":.+", "-.+" },
+					file_pattern = { "*id_ed25519", "*id_rsa", "*.pem", "*.key", "*.crt" },
+					cloak_pattern = { ".+" },
 				},
 			},
 		},
