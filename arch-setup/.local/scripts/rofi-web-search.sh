@@ -26,8 +26,10 @@ if [[ -n "$choice" && -n "${desktop_map[$choice]}" ]]; then
 else
     if [[ -n "$choice" ]]; then
         query=$(echo "$choice" | sed 's/ /+/g')
-        if [[ "$choice" == "http"* ]]; then
+        if [[ "$choice" =~ ^http.* ]]; then
             xdg-open "${query}"
+        elif [[ "$choice" =~ ^www\.* ]] then
+            xdg-open "https://${query}"
         else
             xdg-open "https://search.brave.com/search?q=${query}"
         fi
