@@ -8,7 +8,7 @@ networkmanager stow || { echo "failed to install essentials"; return 1; }
 # Stow dotfiles
 [[ -d ~/dotfiles ]] || { echo "dotfiles directory not found"; return 1; }
 cd ~/dotfiles
-for dir in alacritty bash dunst fastfetch kitty nvim swaync tmux waybar wofi zsh setup-arch; do
+for dir in alacritty bash dunst fastfetch kitty nvim swaync tmux waybar rofi-wayland zsh setup-arch; do
 	stow "$dir"
 done
 cd ~
@@ -62,7 +62,7 @@ yay -S --noconfirm pipewire pipewire-pulse wireplumber pavucontrol \
 ||  { echo "failed to install audio tools"; return 1; }
 
 # Install extras
-yay -S --noconfirm firefox mullvad-vpn thunar obs-studio obsidian vlc imv mpv gimp \
+yay -S --noconfirm firefox zen-browser-bin mullvad-vpn thunar obs-studio obsidian vlc imv mpv gimp \
 htop fastfetch brightnessctl || { echo "failed to install extra tools"; return 1; }
 
 # Enable system services
