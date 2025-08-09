@@ -30,8 +30,9 @@ sudo mv ~/.cargo ~/.config/cargo && sudo mv ~/.rustup ~/.config/rustup
 yay -S --noconfirm go hugo python python-pip || { echo "failed to install go any python"; return 1; }
 
 # Install hyprland
-yay -S --noconfirm wayland hyprland xdg-desktop-portal xdg-desktop-portal-wlr waybar \
-grim slurp jq hyprpicker hyprshot hyprpaper wl-clipboard wofi swaync swaylock-effects swayidle \
+yay -S --noconfirm wayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland \
+xdg-desktop-portal-wlr waybar grim slurp jq hyprpicker hyprshot hyprpaper \
+wl-clipboard wofi swaync swaylock-effects swayidle \
 || { echo "failed to install hyprland"; return 1; }
 
 # Install fonts
