@@ -90,20 +90,6 @@ return {
 		end,
 	},
 	{
-		"iamcco/markdown-preview.nvim",
-		name = "Makrdown Preview",
-		event = "VeryLazy",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && npm install",
-		ft = { "markdown" },
-		config = function()
-			vim.g.mkdp_auto_start = 1
-			vim.g.mkdp_auto_close = 1
-			vim.g.mkdp_browser = "firefox"
-			vim.g.mkdp_port = "8181"
-		end,
-	},
-	{
 		"arnamak/stay-centered.nvim",
 		name = "Stay centered",
 		lazy = false,
