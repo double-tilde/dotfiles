@@ -61,7 +61,6 @@ return {
 		},
 	},
 	{
-		-- Highlight RGB colors
 		"brenoprata10/nvim-highlight-colors",
 		name = "Highlight Colors",
 		event = "VeryLazy",
@@ -81,12 +80,6 @@ return {
 			-- yinq - [Y]ank [I]nside [N]ext [']quote
 			-- ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
-
-			-- Add/delete/replace surroundings (brackets, quotes, etc.)
-			-- saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-			-- sd'   - [S]urround [D]elete [']quotes
-			-- sr)'  - [S]urround [R]eplace [)] [']
-			require("mini.surround").setup()
 		end,
 	},
 	{
@@ -98,7 +91,6 @@ return {
 		},
 	},
 	{
-		-- Undo Tree lets you go back through undo-history in a non-linear way
 		"mbbill/undotree",
 		name = "Undo Tree",
 		event = "VeryLazy",
@@ -107,7 +99,6 @@ return {
 		end,
 	},
 	{
-		-- Vim Be Good Game
 		-- Run the following command :VimBeGood
 		"ThePrimeagen/vim-be-good",
 		name = "Vim Be Good",
@@ -119,8 +110,12 @@ return {
 		event = "VeryLazy",
 	},
 	{
-		-- Detect tabstop and shiftwidth automatically
 		"tpope/vim-sleuth",
 		name = "Sleuth",
+	},
+	{
+		"tpope/vim-surround",
+		name = "Vim Surround",
+		event = "VeryLazy",
 	},
 }

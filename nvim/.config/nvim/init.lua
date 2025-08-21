@@ -9,5 +9,4 @@
 require("nv.base") -- General Settings
 require("nv.keymaps")
 require("nv.autocommands")
-require("nv.silence")
 require("nv.lazy") -- Lazy Plugins Manager

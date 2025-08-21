@@ -3,7 +3,8 @@ vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Press ESC to remove search highlight" })
 
 -- Save the file
-vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "[W]rite file" })
+vim.keymap.set("n", "<leader>lw", "<cmd>w<CR>", { desc = "[L]ets [W]rite" })
+vim.keymap.set("n", "<leader>lq", "<cmd>q<CR>", { desc = "[L]ets [Q]uit" })
 
 -- Disable arrow keys in normal mode to promote use of the home row
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move"<CR>')

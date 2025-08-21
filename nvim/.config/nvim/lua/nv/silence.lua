@@ -1,5 +1,6 @@
 -- Silence E468
 -- https://github.com/neovim/neovim/issues/24059
+-- Currently not using this as it has some issues on wsl
 
 local function norm_unmapped(c)
 	return vim.cmd({ cmd = "norm", args = { c }, bang = true })

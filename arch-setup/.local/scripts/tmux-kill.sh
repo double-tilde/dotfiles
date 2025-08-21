@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 echo 'Are you sure you want to kill all sessions except the active one? (y/n)'
 read -r answer
