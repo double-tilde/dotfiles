@@ -1,0 +1,72 @@
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+/* Edited: ~~ Double Tilde ~~ */
+
+* {
+    font: "Karla 16";
+    bg0:  #131314EE;
+    bg1:  #27272a;
+    bg2:  #353539;
+    fg0:  #c9c7cd;
+
+    background-color: transparent;
+    text-color:       @fg0;
+    padding:          0px;
+    margin:           0px;
+}
+
+window {
+  fullscreen: true;
+  padding: 96px;
+  background-color: @bg0;
+}
+
+inputbar {
+  background-color: @bg1;
+  margin:   0 calc(50% - 513px);
+  padding: 12px;
+  spacing:  4px;
+  border:         1px;
+  border-color:   @bg2;
+  children: [icon-search,entry];
+}
+
+icon-search {
+  expand:   false;
+  filename: "search";
+  vertical-align: 0.5;
+}
+
+entry {
+  placeholder:        "Search";
+  placeholder-color:  @fg0;
+}
+
+listview {
+  margin:   96px calc(50% - 512px);
+  spacing:  8px;
+  columns:  1;
+  fixed-columns: true;
+}
+
+element, element-text, element-icon {
+  cursor: pointer;
+}
+
+element {
+  padding: 12px;
+  spacing: 4px;
+  orientation: vertical;
+}
+
+element selected {
+  background-color: @bg1;
+}
+
+element-icon {
+  size: 48px;
+  horizontal-align: 0.5;
+}
+
+element-text {
+  horizontal-align: 0.5;
+}
