@@ -6,6 +6,10 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Press ESC to remov
 vim.keymap.set("n", "<leader>lw", "<cmd>w<CR>", { desc = "[L]ets [W]rite" })
 vim.keymap.set("n", "<leader>lq", "<cmd>q<CR>", { desc = "[L]ets [Q]uit" })
 
+-- Move to the end and start of a line nicely
+vim.keymap.set({"n", "v"}, "<leader>L", "$", { desc = "Move to the end of line" })
+vim.keymap.set({"n", "v"}, "<leader>H", "_", { desc = "Move to the first char" })
+
 -- Disable arrow keys in normal mode to promote use of the home row
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move"<CR>')

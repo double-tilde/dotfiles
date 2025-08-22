@@ -6,7 +6,7 @@
 
 ; ~~ Variables ~~
 Terminal := "wezterm-gui.exe"
-TerminalTitle := "~"
+TerminalTitle := "wslhost.exe"
 Browser := "firefox.exe"
 BrowserTitle := "Mozilla Firefox"
 FTP := "C:\Program Files (x86)\WinSCP\WinSCP.exe"
