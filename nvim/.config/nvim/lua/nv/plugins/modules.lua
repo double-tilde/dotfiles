@@ -1,5 +1,16 @@
 return {
 	{
+		"LunarVim/breadcrumbs.nvim",
+		name = "Breadcrumbs",
+		lazy = false,
+		dependencies = {
+			{ "SmiteshP/nvim-navic" },
+		},
+		config = function()
+			require("breadcrumbs").setup()
+		end,
+	},
+	{
 		"laytan/cloak.nvim",
 		name = "Cloak",
 		event = "VeryLazy",

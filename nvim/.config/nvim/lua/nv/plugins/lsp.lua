@@ -3,36 +3,26 @@ return {
 		"neovim/nvim-lspconfig",
 		name = "Neovim LSP Config",
 		dependencies = {
-			-- Automatically install LSPs and related tools to stdpath for Neovim
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			-- {
-			-- 	-- Useful status updates for LSP.
-			-- 	"j-hui/fidget.nvim",
-			-- 	name = "Fidget",
-			-- 	opts = {
-			-- 		notification = {
-			-- 			window = {
-			-- 				winblend = 0,
-			-- 			},
-			-- 		},
-			-- 	},
-			-- },
+			{
+				-- Useful status updates for LSP.
+				"j-hui/fidget.nvim",
+				name = "Fidget",
+				opts = {
+					notification = {
+						window = {
+							winblend = 0,
+						},
+					},
+				},
+			},
 		},
 		config = function()
 			local util = require("lspconfig/util")
 			-- LSP stands for Language Server Protocol. It's a protocol that helps editors
 			-- and language tooling communicate in a standardized fashion.
-
-			-- In general, you have a "server" which is some tool built to understand a particular
-			-- language (such as gopls, lua_ls, rust_analyzer, etc.). These Language Servers
-			-- are standalone processes that communicate with some "client" - in this case, Neovim!
-
-			-- Language Servers are external tools that must be installed separately from
-			-- Neovim. This is where mason and related plugins come into play.
-			-- If you're wondering about lsp vs treesitter, you can check out the wonderfully
-			-- and elegantly composed help section, :help lsp-vs-treesitter
 
 			-- This function gets run when an LSP attaches to a particular buffer.
 			-- That is to say, every time a new file is opened that is associated with
@@ -79,6 +69,9 @@ return {
 							buffer = event.buf,
 							callback = vim.lsp.buf.clear_references,
 						})
+					end
+					if client and client.server_capabilities.documentSymbolProvider then
+						require("nvim-navic").attach(client, event.buf)
 					end
 				end,
 			})

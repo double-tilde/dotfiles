@@ -181,13 +181,6 @@ return {
 		end,
 	},
 	{
-		-- Shows the nested structure of the code at the top of the screen
-		"nvim-treesitter/nvim-treesitter-context",
-		name = "Treesitter Context",
-		event = "VeryLazy",
-		opts = {},
-	},
-	{
 		"double-tilde/treesitter-tag-hop.nvim",
 		name = "Treesitter Tag Hop",
 		event = "VeryLazy",
