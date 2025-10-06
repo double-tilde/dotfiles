@@ -34,6 +34,7 @@ return {
 			javascript = { "prettier" },
 			json = { "prettier" },
 			php = { "php_cs_fixer" },
+			typescript = { "prettier" },
 		},
 		formatters = {
 			php_cs_fixer = {

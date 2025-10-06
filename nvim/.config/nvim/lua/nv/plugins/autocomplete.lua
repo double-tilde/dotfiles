@@ -91,7 +91,7 @@ return {
 					{ name = "luasnip", priority = 4 },
 					{ name = "nvim_lsp", priority = 3 },
 					{ name = "path", priority = 2 },
-					-- { name = "cmdline", priority = 1 },
+					{ name = "cmdline", priority = 1 },
 				},
 			})
 		end,

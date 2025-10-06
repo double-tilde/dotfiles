@@ -29,6 +29,10 @@ sudo mv ~/.cargo ~/.config/cargo && sudo mv ~/.rustup ~/.config/rustup
 
 yay -S --noconfirm go hugo python python-pip || { echo "failed to install go any python"; return 1; }
 
+if ! command -v npm &>/dev/null; then
+	npm install -g typescript
+end
+
 # Install hyprland
 yay -S --noconfirm wayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland \
 xdg-desktop-portal-wlr waybar grim slurp jq hyprpicker hyprshot hyprpaper \

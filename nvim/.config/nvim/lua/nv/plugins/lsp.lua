@@ -1,5 +1,5 @@
 return {
-	{ -- LSP Configuration & Plugins
+	{
 		"neovim/nvim-lspconfig",
 		name = "Neovim LSP Config",
 		dependencies = {
@@ -21,8 +21,6 @@ return {
 		},
 		config = function()
 			local util = require("lspconfig/util")
-			-- LSP stands for Language Server Protocol. It's a protocol that helps editors
-			-- and language tooling communicate in a standardized fashion.
 
 			-- This function gets run when an LSP attaches to a particular buffer.
 			-- That is to say, every time a new file is opened that is associated with
@@ -89,7 +87,6 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server. to see the options for lua_ls, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- See :help lspconfig-all for a list of all the pre-configured LSPs
-				-- Some languages (like typescript) have entire language plugins that can be useful: https://github.com/pmizio/typescript-tools.nvim, but for many setups, the LSP (tsserver) will work just fine
 				gopls = {
 					cmd = { "gopls" },
 					filetypes = { "go", "gomod", "gowork", "gompl" },
@@ -117,7 +114,6 @@ return {
 					filetypes = { "python" },
 				},
 				lua_ls = {
-					-- capabilities = {},
 					settings = {
 						Lua = {
 							completion = {
@@ -140,6 +136,23 @@ return {
 						},
 					},
 				},
+				ts_ls = {
+					filetypes = {
+						"javascript",
+						"javascriptreact",
+						"javascript.jsx",
+						"typescript",
+						"typescriptreact",
+						"typescript.tsx",
+					},
+					cmd = { "typescript-language-server", "--stdio" },
+					root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
+					on_attach = function(client)
+						client.server_capabilities.documentFormattingProvider = false
+					end,
+					-- settings = {}
+				},
+
 			}
 
 			-- Ensure the servers and tools are installed
@@ -150,7 +163,7 @@ return {
 			vim.list_extend(ensure_installed, {
 				"black",
 				"cssls",
-				"eslint_d",
+				"eslint-lsp",
 				"gofumpt",
 				"goimports",
 				"golangci-lint",
@@ -163,8 +176,9 @@ return {
 				"prettier",
 				"pyright",
 				"typescript-language-server",
-				"stylua",
+				-- "stylua",
 			})
+
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			require("mason-lspconfig").setup({
