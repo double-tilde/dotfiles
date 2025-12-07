@@ -91,6 +91,7 @@ return {
 			-- yinq - [Y]ank [I]nside [N]ext [']quote
 			-- ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
+			require("mini.surround").setup({})
 		end,
 	},
 	{
@@ -123,10 +124,5 @@ return {
 	{
 		"tpope/vim-sleuth",
 		name = "Sleuth",
-	},
-	{
-		"tpope/vim-surround",
-		name = "Vim Surround",
-		event = "VeryLazy",
 	},
 }
