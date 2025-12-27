@@ -110,9 +110,6 @@ return {
 						},
 					},
 				},
-				pyright = {
-					filetypes = { "python" },
-				},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -150,7 +147,9 @@ return {
 					on_attach = function(client)
 						client.server_capabilities.documentFormattingProvider = false
 					end,
-					-- settings = {}
+				},
+				pyright = {
+					filetypes = { "python" },
 				},
 
 			}
@@ -171,6 +170,7 @@ return {
 				"gopls",
 				"html",
 				"isort",
+				"jdtls",
 				"jsonlint",
 				"php-cs-fixer",
 				"prettier",
