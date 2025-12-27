@@ -27,7 +27,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash 
 curl https://sh.rustup.rs -sSf | sh || { echo "failed to install rust"; return 1; }
 sudo mv ~/.cargo ~/.config/cargo && sudo mv ~/.rustup ~/.config/rustup
 
-yay -S --noconfirm go hugo python python-pip || { echo "failed to install go any python"; return 1; }
+yay -S --noconfirm go hugo python python-pip sudo pacman jdk-openjdk || { echo "failed to install go, python and java"; return 1; }
 
 if ! command -v npm &>/dev/null; then
 	npm install -g typescript
