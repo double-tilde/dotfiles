@@ -52,6 +52,10 @@ export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 . "$HOME/.config/cargo/env"
 . "/home/double-tilde/.config/cargo/env"
 
+# Add java to path
+export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
+export PATH=$PATH:$JAVA_HOME/bin
+
 # Start hyprland
 if [ "$(tty)" = "/dev/tty1" ]; then
     exec Hyprland
