@@ -58,5 +58,5 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 # Start hyprland
 if [ "$(tty)" = "/dev/tty1" ]; then
-    exec Hyprland
+    exec start-hyprland
 fi
