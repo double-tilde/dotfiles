@@ -20,7 +20,7 @@ return {
 			},
 		},
 		notifier = {
-			enabled = true,
+			enabled = false,
 			timeout = 2000,
 		},
 		styles = {
