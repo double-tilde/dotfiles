@@ -162,6 +162,7 @@ return {
 			vim.list_extend(ensure_installed, {
 				"black",
 				"cssls",
+				"delve",
 				"eslint-lsp",
 				"gofumpt",
 				"goimports",

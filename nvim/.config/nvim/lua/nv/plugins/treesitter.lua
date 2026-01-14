@@ -138,7 +138,6 @@ return {
 				"c",
 				"cpp",
 				"css",
-				"delve",
 				"go",
 				"gotmpl",
 				"html",
