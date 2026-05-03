@@ -18,7 +18,7 @@ tmux send-keys "tty-clock" C-m
 
 # htop
 tmux select-pane -D
-tmux send-keys "htop" C-m
+tmux send-keys "htop -d 30 --no-function-bar --readonly" C-m
 
 tmux select-pane -R
 
