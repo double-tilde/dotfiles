@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
-# Start new session
-tmux new-session -d -s dt
+# Get current terminal dimensions
+set -- $(stty size)
+ROWS=$1
+COLS=$2
+
+# New session with dimension (subtract 1 row for status bar)
+tmux new-session -d -s dt -x "$COLS" -y "$((ROWS - 1))"
 
 # Right pane
-tmux split-window -h -p 65
+tmux split-window -h -p 75
 
 # Go to left pane
 tmux select-pane -L
