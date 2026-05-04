@@ -68,7 +68,7 @@ yay -S --noconfirm pipewire pipewire-pulse wireplumber pavucontrol \
 
 # Install extras
 yay -S --noconfirm firefox zen-browser-bin mullvad-vpn thunar obs-studio obsidian \
-syncthing vlc imv mpv gimp htop fastfetch brightnessctl okular tty-clock\
+syncthing vlc imv mpv gimp htop fastfetch brightnessctl okular tty-clock glances\
 || { echo "failed to install extra tools"; return 1; }
 
 # Enable system services
