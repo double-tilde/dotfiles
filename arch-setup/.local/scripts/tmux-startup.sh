@@ -21,9 +21,9 @@ tmux split-window -v
 tmux select-pane -U
 tmux send-keys "tty-clock" C-m
 
-# htop
+# glances
 tmux select-pane -D
-tmux send-keys "htop -d 30 --no-function-bar --readonly" C-m
+tmux send-keys "glances --disable-left-sidebar" C-m
 
 tmux select-pane -R
 
