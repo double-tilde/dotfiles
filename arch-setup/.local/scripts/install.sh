@@ -8,7 +8,8 @@ networkmanager stow || { echo "failed to install essentials"; return 1; }
 # Stow dotfiles
 [[ -d ~/dotfiles ]] || { echo "dotfiles directory not found"; return 1; }
 cd ~/dotfiles
-for dir in alacritty bash dunst fastfetch kitty nvim swaync tmux waybar rofi-wayland zsh setup-arch; do
+for dir in alacritty arch-setup autohotkey bash fastfetch glances glazewm \
+hyprland i3 kitty nvim php picom polybar rofi swaync tmux waybar wezterm zsh; do
 	stow "$dir"
 done
 cd ~
@@ -46,8 +47,8 @@ adobe-source-sans-fonts adobe-source-serif-fonts noto-fonts noto-fonts-cjk \
 noto-fonts-emoji noto-fonts-extra font-manager || { echo "failed to install fonts"; return 1; }
 
 # Install development tools
-yay -S --noconfirm alacitty kitty zsh tmux fzf ripgrep neovim bat tldr openssh \
-||  { echo "failed to install development tools"; return 1; }
+yay -S --noconfirm alacitty kitty zsh tmux fzf ripgrep neovim tree-sitter-cli \
+bat tldr openssh ||  { echo "failed to install development tools"; return 1; }
 
 # Install Oh My Zsh
 if command -v zsh; then
@@ -67,7 +68,7 @@ yay -S --noconfirm pipewire pipewire-pulse wireplumber pavucontrol \
 ||  { echo "failed to install audio tools"; return 1; }
 
 # Install extras
-yay -S --noconfirm firefox zen-browser-bin mullvad-vpn thunar obs-studio obsidian \
+yay -S --noconfirm firefox mullvad-vpn thunar obs-studio obsidian \
 syncthing vlc imv mpv gimp htop fastfetch brightnessctl okular tty-clock glances\
 || { echo "failed to install extra tools"; return 1; }
 
