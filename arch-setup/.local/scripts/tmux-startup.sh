@@ -21,14 +21,14 @@ if [[ $COLS -ge 150 ]]; then
 	
 	# tty-clock
 	tmux select-pane -U
-	tmux send-keys "tty-clock" C-m
+	tmux send-keys "tty-clock -c" C-m
 	
 	# glances
 	tmux select-pane -D
 	tmux send-keys "glances --disable-left-sidebar" C-m
 else
 	# tty-clock
-	tmux send-keys "tty-clock" C-m
+	tmux send-keys "tty-clock -c" C-m
 fi
 
 
