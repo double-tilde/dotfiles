@@ -23,7 +23,7 @@ if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux split-window -h -p 75 -t "$selected_name":1 -c "$selected" "zsh -c 'nvim; zsh'"
 
     tmux new-window -t "$selected_name" -n 'terminal' -c "$selected"
-    tmux split-window -h -p 50 -t "$selected_name":2
+    tmux split-window -h -p 50 -t "$selected_name":2 -c "$selected"
     tmux select-pane -L -t "$selected_name":2
 
     tmux select-window -t "$selected_name":1
@@ -36,7 +36,7 @@ if ! tmux has-session -t="$selected_name" 2>/dev/null; then
     tmux split-window -h -p 75 -t "$selected_name":1 -c "$selected" "zsh -c 'nvim; zsh'"
 
     tmux new-window -t "$selected_name" -n 'terminal' -c "$selected"
-    tmux split-window -h -p 50 -t "$selected_name":2
+    tmux split-window -h -p 50 -t "$selected_name":2 -c "$selected"
     tmux select-pane -L -t "$selected_name":2
 
     tmux select-window -t "$selected_name":1
