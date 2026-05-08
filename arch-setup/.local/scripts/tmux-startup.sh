@@ -6,8 +6,7 @@ ROWS=$1
 COLS=$2
 
 # New session with dimension (subtract 1 row for status bar)
-tmux new-session -d -s dt -x "$COLS" -y "$((ROWS - 1))"
-
+tmux new-session -d -s "~~" -x "$COLS" -y "$((ROWS - 1))"
 
 # If the screen is wide enough
 if [[ $COLS -ge 150 ]]; then
@@ -38,7 +37,6 @@ else
 	tmux send-keys "tty-clock -c" C-m
 fi
 
-
 tmux select-pane -R
 
-tmux attach-session -t dt
+tmux attach-session -t "~~"
