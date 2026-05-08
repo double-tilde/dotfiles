@@ -32,7 +32,7 @@ yay -S --noconfirm go hugo python python-pip sudo pacman jdk-openjdk || { echo "
 
 if ! command -v npm &>/dev/null; then
 	npm install -g typescript
-end
+fi
 
 # Install hyprland
 yay -S --noconfirm wayland hyprland xdg-desktop-portal xdg-desktop-portal-hyprland \
