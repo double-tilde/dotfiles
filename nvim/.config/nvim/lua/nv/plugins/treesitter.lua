@@ -161,25 +161,25 @@ return {
 			vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
 		end,
 	},
-	-- {
-	-- 	"double-tilde/treesitter-tag-hop.nvim",
-	-- 	name = "Treesitter Tag Hop",
-	-- 	event = "VeryLazy",
-	-- 	dependencies = {
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 	},
-	-- 	config = function()
-	-- 		local tth = require("treesitter-tag-hop")
-	-- 		tth.setup({
-	-- 			show_messages = false,
-	-- 			filetypes = { "html", "php" },
-	-- 		})
-	-- 		vim.keymap.set({ "n", "v" }, "<leader>j", function()
-	-- 			require("treesitter-tag-hop").jump_tag("next")
-	-- 		end, { desc = "Jump to next tag" })
-	-- 		vim.keymap.set({ "n", "v" }, "<leader>J", function()
-	-- 			require("treesitter-tag-hop").jump_tag("prev")
-	-- 		end, { desc = "Jump to previous tag" })
-	-- 	end,
-	-- },
+	{
+		"double-tilde/treesitter-tag-hop.nvim",
+		name = "Treesitter Tag Hop",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			local tth = require("treesitter-tag-hop")
+			tth.setup({
+				show_messages = false,
+				filetypes = { "html", "php", "htmlhugo" },
+			})
+			vim.keymap.set({ "n", "v" }, "<leader>j", function()
+				require("treesitter-tag-hop").jump_tag("next")
+			end, { desc = "Jump to next tag" })
+			vim.keymap.set({ "n", "v" }, "<leader>J", function()
+				require("treesitter-tag-hop").jump_tag("prev")
+			end, { desc = "Jump to previous tag" })
+		end,
+	},
 }
