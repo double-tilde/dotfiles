@@ -17,7 +17,7 @@ if [[ $COLS -ge 150 ]]; then
 	tmux select-pane -L
 
 	# Split left vertically
-	tmux split-window -v
+	tmux split-window -v -p 70
 	
 	# tty-clock
 	tmux select-pane -U
