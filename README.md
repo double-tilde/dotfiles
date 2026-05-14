@@ -20,7 +20,7 @@ My dotfiles based on the [Old World](https://github.com/dgox16/oldworld.nvim) co
   - [Tabliss wallpaper collection](https://unsplash.com/collections/74420642/victorian)
   - [British Library](https://unsplash.com/@britishlibrary)
   - [Birmingham Museum Trust](https://unsplash.com/@birminghammuseumstrust)
-  - [Europeana](https://unsplash.com/@birminghammuseumstrust)
+  - [Europeana](https://unsplash.com/@europeana)
 
 ![](images/look.png)
 

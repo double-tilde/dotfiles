@@ -121,8 +121,9 @@ return {
 							},
 							diagnostics = {
 								globals = {
-									"vim",
+									"hl",
 									"require",
+									"vim",
 								},
 								-- Ignore Lua_LS's noisy missing-fields warnings
 								disable = { "missing-fields" },
