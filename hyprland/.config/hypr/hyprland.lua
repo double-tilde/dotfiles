@@ -39,7 +39,7 @@ local browser       = "firefox"
 local notes         = "obsidian --enable-features=UseOzonePlatform --ozone-platform-hint=wayland"
 local graphics      = "gimp"
 local vpn           = "mullvad-vpn"
-local music           = "bitwig-studio"
+local music         = "bitwig-studio"
 local emoji         = "gnome-characters"
 
 -- Lock the screen after 20 minutes
@@ -62,7 +62,7 @@ end)
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("HYPRCURSOR_THEME", "phinger-cursors-light")
-hl.env("XCURSOR_SIZE", "24")
+hl.env("XCURSOR_SIZE", "20")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 -- PERMISSIONS --
@@ -341,6 +341,13 @@ hl.window_rule({
 	no_focus = true,
 })
 
+-- unscale XWayland
+hl.config({
+	xwayland = {
+		force_zero_scaling = true
+	}
+})
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
@@ -357,4 +364,3 @@ hl.window_rule({
 	move  = "20 monitor_h-120",
 	float = true,
 })
-
