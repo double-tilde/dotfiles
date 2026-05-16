@@ -64,7 +64,7 @@ if command -v tmux; then
 fi
 
 # Install Audio tools
-yay -S --noconfirm pipewire pipewire-pulse wireplumber pavucontrol \
+yay -S --noconfirm pipewire pipewire-pulse wireplumber pavucontrol bitwig-studio \
 ||  { echo "failed to install audio tools"; return 1; }
 
 # Install extras

@@ -39,6 +39,7 @@ local browser       = "firefox"
 local notes         = "obsidian --enable-features=UseOzonePlatform --ozone-platform-hint=wayland"
 local graphics      = "gimp"
 local vpn           = "mullvad-vpn"
+local music           = "bitwig-studio"
 local emoji         = "gnome-characters"
 
 -- Lock the screen after 20 minutes
@@ -53,7 +54,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal .. " -e ~/.local/scripts/tmux-startup.sh", { workspace = "1" })
 	hl.exec_cmd(browser, { workspace = "2" })
 	hl.exec_cmd(notes, { workspace = "3" })
-	hl.exec_cmd(vpn, { workspace = "4" })
 	hl.exec_cmd("swaync & waybar & hyprpaper & hyprctl setcursor phinger-cursors-light 24 &")
 	hl.exec_cmd(locktimer)
 end)
@@ -244,6 +244,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menuWebSearch))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(notes))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(music))
 hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd(emoji))
 
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
@@ -326,6 +327,7 @@ local suppressMaximizeRule = hl.window_rule({
 
 hl.window_rule({
 	-- Fix some dragging issues with XWayland
+	-- This should help Bitwig
 	name     = "fix-xwayland-drags",
 	match    = {
 		class      = "^$",
@@ -355,3 +357,4 @@ hl.window_rule({
 	move  = "20 monitor_h-120",
 	float = true,
 })
+
