@@ -26,9 +26,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_PICTURES_DIR="$HOME/docs/images"
 
 # Defaults
-export QT_AUTO_SCREEN_SCALE_FACTOR=0
-export GDK_SCALE=1.25
-export QT_SCALE_FACTOR=1.25
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export TERMINAL="kitty"
