@@ -2,10 +2,15 @@
 
 export FZF_DEFAULT_OPTS="--layout=reverse --height=30% --ansi --border bottom --color=fg:#c9c7cd,bg:#161617,hl:#c9c7cd --color=fg+:#92a2d5,bg+:#161617,hl+:#92a2d5 --color=info:#90b99f,prompt:#df6882,pointer:#92a2d5 --color=marker:#90b99f,spinner:#90b99f,header:#e6b99d"
 
+# Get current terminal dimensions
+set -- $(stty size)
+ROWS=$1
+COLS=$2
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/documents ~/dotfiles ~/dotfiles/*/.config/ ~/projects/ ~/ -mindepth 1 -maxdepth 2 -type d | fzf)
 fi
 
 [[ -z $selected ]] && exit 0
@@ -14,16 +19,26 @@ selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s "$selected_name" -c "$selected" -n 'neovim'
+    tmux new-session -s "$selected_name" -c "$selected" -n 'neovim' -x "$COLS" -y "$((ROWS - 1))"
+    tmux split-window -h -p 75 -t "$selected_name":1 -c "$selected" "zsh -c 'nvim; zsh'"
+
     tmux new-window -t "$selected_name" -n 'terminal' -c "$selected"
+    tmux split-window -h -p 50 -t "$selected_name":2 -c "$selected"
+    tmux select-pane -L -t "$selected_name":2
+
     tmux select-window -t "$selected_name":1
     tmux attach-session -t "$selected_name"
     exit 0
 fi
 
 if ! tmux has-session -t="$selected_name" 2>/dev/null; then
-    tmux new-session -ds "$selected_name" -c "$selected" -n 'neovim'
+    tmux new-session -ds "$selected_name" -c "$selected" -n 'neovim' -x "$COLS" -y "$((ROWS - 1))"
+    tmux split-window -h -p 75 -t "$selected_name":1 -c "$selected" "zsh -c 'nvim; zsh'"
+
     tmux new-window -t "$selected_name" -n 'terminal' -c "$selected"
+    tmux split-window -h -p 50 -t "$selected_name":2 -c "$selected"
+    tmux select-pane -L -t "$selected_name":2
+
     tmux select-window -t "$selected_name":1
 fi
 
