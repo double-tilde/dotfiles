@@ -18,7 +18,7 @@ config.wsl_domains = {
 		name = "WSL:Ubuntu-24.04",
 		distribution = "Ubuntu-24.04",
 		default_cwd = "~",
-		default_prog = { "zsh", "-c", "tmux" },
+		default_prog = { "zsh", "-c", "tmux-startup.sh" },
 	},
 }
 config.default_domain = "WSL:Ubuntu-24.04"
@@ -98,6 +98,8 @@ config.font_size = 19.0
 config.window_decorations = "NONE | RESIZE"
 -- config.window_background_image = "./wezterm.jpg"
 config.window_background_opacity = 1.0
+config.initial_cols = 300
+config.initial_rows = 70
 config.window_padding = {
 	left = 8,
 	right = 8,
