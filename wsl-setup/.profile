@@ -8,6 +8,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/bin/nvim/bin" ] ; then
+    PATH="$HOME/.local/bin/nvim/bin:$PATH"
+fi
+
 # Set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/scripts" ] ; then
     PATH="$HOME/.local/scripts:$PATH"
