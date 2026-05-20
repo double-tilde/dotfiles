@@ -31,7 +31,28 @@ return {
 			}
 
 			vim.api.nvim_create_autocmd('FileType', {
-				pattern = { '<filetype>' },
+				pattern = {
+					"c",
+					"cpp",
+					"css",
+					"go",
+					"html",
+					"java",
+					"javascript",
+					"json",
+					"lua",
+					"luadoc",
+					"markdown",
+					"markdown_inline",
+					"php",
+					"python",
+					"rust",
+					"svelte",
+					"typescript",
+					"yaml",
+					"vim",
+					"vimdoc",
+				},
 				callback = function() vim.treesitter.start() end,
 			})
 		end,
