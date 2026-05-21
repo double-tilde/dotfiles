@@ -251,7 +251,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Screenshots
-hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
 
 -- Move focus with mainMod + arrow keys
