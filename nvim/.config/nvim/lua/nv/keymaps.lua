@@ -46,6 +46,9 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagn
 vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, { desc = "Show [D]iagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Open [D]iagnostic [Q]uickfix list" })
 
+-- Bracket movements
+vim.keymap.set({"n", "v"}, "<leader>la", "%", { desc = "move the cursor to the nearest matching bracket" })
+
 -- Search movements
 -- When jumping through search results, keep the cursor in the center of the window
 vim.keymap.set("n", "n", "nzz", { desc = "Go to the next search result and center the cursor" })
