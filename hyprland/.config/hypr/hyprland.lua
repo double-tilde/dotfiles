@@ -55,7 +55,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd(browser, { workspace = "2" })
 	hl.exec_cmd(notes, { workspace = "3" })
 	hl.exec_cmd(vpn, { workspace = "4" })
-	hl.exec_cmd("swaync & waybar & hyprpaper & hyprctl setcursor phinger-cursors-light 24 &")
+	hl.exec_cmd("random-wallpaper.sh & swaync & waybar & hyprctl setcursor phinger-cursors-light 24 &")
 	hl.exec_cmd(locktimer)
 end)
 
