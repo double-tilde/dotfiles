@@ -65,3 +65,8 @@
 # Operating system files
 **/.DS_Store
 **/Thumbs.db
+
+# Syncthing
+.stignore
+.stversions/
+.stfolder/
