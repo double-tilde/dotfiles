@@ -6,8 +6,8 @@ vim.keymap.set("n", "<leader>lw", "<cmd>w<CR>", { desc = "[L]ets [W]rite" })
 vim.keymap.set("n", "<leader>lq", "<cmd>q<CR>", { desc = "[L]ets [Q]uit" })
 
 -- Move to the end and start of a line nicely
-vim.keymap.set({"n", "v"}, "<leader>L", "$", { desc = "Move to the end of line" })
-vim.keymap.set({"n", "v"}, "<leader>H", "_", { desc = "Move to the first char" })
+vim.keymap.set({ "n", "v" }, "<leader>L", "$", { desc = "Move to the end of line" })
+vim.keymap.set({ "n", "v" }, "<leader>H", "_", { desc = "Move to the first char" })
 
 -- Disable arrow keys in normal mode to promote use of the home row
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move"<CR>')
@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, { desc = "Show [D]i
 vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Open [D]iagnostic [Q]uickfix list" })
 
 -- Bracket movements
-vim.keymap.set({"n", "v"}, "<leader>la", "%", { desc = "move the cursor to the nearest matching bracket" })
+vim.keymap.set({ "n", "v" }, "<leader>la", "%", { desc = "move the cursor to the nearest matching bracket" })
 
 -- Search movements
 -- When jumping through search results, keep the cursor in the center of the window
@@ -113,3 +113,10 @@ vim.keymap.set("n", "<leader>q", function()
 		vim.cmd("copen")
 	end
 end, { desc = "Toggle quickfix list visibility" })
+
+-- Toggle autocomplete on and off
+vim.keymap.set("n", "<leader>ta", function()
+	_G.ToggleAutocomplete()
+end, {
+	desc = "Toggle Autocomplete",
+})

@@ -39,6 +39,31 @@ return {
 			luasnip.filetype_extend("htmlhugo", { "html" })
 			luasnip.filetype_extend("php", { "html" })
 
+			local autocomplete_enabled = true
+
+			local function set_autocomplete(enabled)
+				autocomplete_enabled = enabled
+
+				cmp.setup({
+					completion = {
+						autocomplete = enabled
+							and { cmp.TriggerEvent.TextChanged }
+							or {},
+						completeopt = "menu,menuone,noselect",
+					},
+				})
+			end
+
+			_G.ToggleAutocomplete = function()
+				set_autocomplete(not autocomplete_enabled)
+
+				if autocomplete_enabled then
+					print("Autocomplete ON")
+				else
+					print("Autocomplete OFF")
+				end
+			end
+
 			cmp.setup({
 				snippet = {
 					expand = function(args)
@@ -55,7 +80,6 @@ return {
 					},
 				},
 
-				completion = { completeopt = "menu,menuone,noselect" },
 				preselect = cmp.PreselectMode.None,
 
 				mapping = cmp.mapping.preset.insert({
@@ -88,20 +112,12 @@ return {
 				}),
 				sources = {
 					-- { name = "supermaven", priority = 5 },
-					{ name = "luasnip", priority = 4 },
+					{ name = "luasnip",  priority = 4 },
 					{ name = "nvim_lsp", priority = 3 },
-					{ name = "path", priority = 2 },
-					{ name = "cmdline", priority = 1 },
+					{ name = "path",     priority = 2 },
+					{ name = "cmdline",  priority = 1 },
 				},
 			})
 		end,
 	},
-	-- {
-	-- 	"supermaven-inc/supermaven-nvim",
-	-- 	name = "Super Maven",
-	-- 	event = "VeryLazy",
-	-- 	config = function()
-	-- 		require("supermaven-nvim").setup({})
-	-- 	end,
-	-- },
 }
