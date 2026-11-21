@@ -233,6 +233,7 @@ hl.device({
 
 -- KEYBINDINGS --
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/
+hl.bind("CTRL + J", hl.dsp.send_shortcut({ mods = "", key = "Escape" }))
 
 hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("~/.local/scripts/powermenu.sh"))
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal .. " -e tmux"))
